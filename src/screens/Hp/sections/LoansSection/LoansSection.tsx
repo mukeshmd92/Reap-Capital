@@ -1,0 +1,108 @@
+import React from "react";
+import { Card, CardContent } from "../../../../components/ui/card";
+import { Button } from "../../../../components/ui/button";
+import { ArrowUpRightIcon } from "lucide-react";
+import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
+import { ICONS } from "../../../../assets";
+
+const LoansSection = () => {
+  const featuresData = [
+    {
+      title: "Working Capital Loan",
+      description:
+        "For businesses that need steady cash to handle day-to-day operations, from paying vendors to stocking inventory and managing payroll.",
+      iconSrc: ICONS.workingCapital,
+    },
+    {
+      title: "Business Expansion Loan",
+      description:
+        "Fund your next stage of expansion, whether it's opening a new location, upgrading equipment, or increasing production capacity.",
+      iconSrc: ICONS.businessGrowth,
+    },
+    {
+      title: "Line of Credit ",
+      description:
+        "Access funds on demand. Use only what you need, when you need it, and pay interest only on the amount used.",
+      iconSrc: ICONS.creditLine,
+    },
+    {
+      title: "Invoice Financing ",
+      description:
+        "Waiting on payments? Convert unpaid invoices into working capital, no need to chase clients or delay growth plans.",
+      iconSrc: ICONS.invoice,
+    },
+  ];
+  return (
+    <section className="w-full px-4 py-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">
+      <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
+        <HeaderBrick text="Loans" />
+        <h2 className=" flex flex-col items-center text-5xl font-medium text-center tracking-[-1.44px] leading-[58px] [font-family:'Poppins',Helvetica] max-w-xl">
+          <span className="text-black tracking-[-0.69px]">
+            Business Loans Made
+          </span>
+          <span className="text-[#0aa26c] tracking-[-0.69px]">
+            <span className="text-black">for</span> Real Business Needs
+          </span>
+        </h2>
+        <p className="[font-family:'Inter_Variable-Regular',Helvetica] font-normal text-neutral-700 text-lg text-center tracking-[0] leading-[26px] max-w-[32rem] mt-4">
+          Choose the right financing solution to manage cash flow, expand
+          operations, or unlock working capital without any delays or confusion.
+        </p>
+      </header>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[75rem] mx-auto">
+        {featuresData.map((feature, index) => (
+          <Card
+            key={index}
+            className="bg-white rounded-[60px_20px_20px_20px] border border-[#c2c2c2] p-0 overflow-hidden translate-y-[-1rem] animate-fade-up opacity-0"
+            style={
+              {
+                "--animation-delay": `${400 + index * 200}ms`,
+              } as React.CSSProperties
+            }
+          >
+            <CardContent className="p-0 h-[263px] relative">
+              <div className="flex items-start gap-4 p-2 h-full overflow-visible">
+                {/* Icon Section */}
+                <div className="relative w-[124px] h-[124px] mt-[52px] flex-shrink-0">
+                  <img
+                    className="w-full h-full"
+                    alt="Feature icon"
+                    src={feature.iconSrc}
+                  />
+                </div>
+
+                {/* Content Section */}
+                <div className="flex-1  h-full overflow-visible ">
+                  <div className="bg-white rounded-[10px_14px_14px_10px] p-5 h-[100%] shadow-[0px_13px_28px_#0000001a,0px_11px_51px_#00000017,0px_115px_69px_#0000000d,0px_205px_82px_#00000003,0px_320px_90px_transparent] relative">
+                    {/* Title and Description */}
+                    <div className="mb-6">
+                      <h3 className="[font-family:'Inter_Variable-SemiBold',Helvetica] font-semibold text-black text-2xl tracking-[0] leading-[normal] mb-[21px]">
+                        {feature.title}
+                      </h3>
+                      <p className="[font-family:'Inter_Variable-Regular',Helvetica] font-normal text-neutral-700 text-base tracking-[0] leading-[26px]">
+                        {feature.description}
+                      </p>
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="absolute bottom-5 left-5">
+                      <Button
+                        variant="link"
+                        className="h-auto p-0 [font-family:'Inter_Variable-Medium',Helvetica] font-medium text-[#0aa26c] text-lg text-center tracking-[-0.54px] leading-[normal] underline hover:no-underline transition-all duration-300"
+                      >
+                        Let&apos;s Start
+                        <ArrowUpRightIcon className="w-5 h-5 ml-1" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default LoansSection;

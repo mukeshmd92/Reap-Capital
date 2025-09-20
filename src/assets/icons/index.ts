@@ -6,6 +6,16 @@ import topCutMoney from "./topCutMoney.png";
 import dataSecurity from "./data_security.png";
 import rbiTiger from "./RBI.png";
 
+import creditLine from "./creditline.png";
+import businessGrowth from "./businessGrowth.png";
+import industries from "./industries.png";
+import rbi from "./RBI.png";
+import invoice from "./invoice.png";
+import workingCapital from "./workingcapital.png";
+import business from "./business.png";
+import connected from "./connected.png";
+import employee from "./employee.png";
+
 export {
   logo,
   LeftRocket,
@@ -14,4 +24,13 @@ export {
   topCutMoney,
   dataSecurity,
   rbiTiger,
+  creditLine,
+  businessGrowth,
+  industries,
+  rbi,
+  invoice,
+  workingCapital,
+  business,
+  connected,
+  employee,
 };
