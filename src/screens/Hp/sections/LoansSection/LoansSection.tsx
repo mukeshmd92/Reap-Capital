@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent } from "../../../../components/ui/card";
-import { Button } from "../../../../components/ui/button";
 import { ArrowUpRightIcon } from "lucide-react";
 import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
 import { ICONS } from "../../../../assets";

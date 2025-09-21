@@ -1,4 +1,3 @@
-import React from "react";
 import ContactBg from "../assets/images/ContactBg.png";
 import ContactForm from "./ContactForm";
 import { FooterSection } from "../screens/Hp/sections/FooterSection/FooterSection";
@@ -6,12 +5,12 @@ import { BadgeCheck } from "lucide-react";
 import { TextAnimate } from "../components/ui/text-animate";
 const ContactPage = () => {
   return (
-    <>
+    <div className="bg-black">
       <div
-        className="overflow-hidden h-screen w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
+        className="overflow-hidden h-screen w-full relative flex justify-center bg-cover bg-center rounded-b-4xl bg-black"
         style={{ backgroundImage: `url(${ContactBg})` }}
       >
-        <div className="flex  justify-between items-center gap-11 px-5">
+        <div className=" w-[75rem] flex justify-between items-center  ">
           <div className="flex flex-col gap-5 mt-[-50px] w-152  text-white items-start  ">
             <div>
               <h1 className="text-5xl font-medium ">
@@ -63,8 +62,9 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+
       <FooterSection />
-    </>
+    </div>
   );
 };
 

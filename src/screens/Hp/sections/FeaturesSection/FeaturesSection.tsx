@@ -1,8 +1,3 @@
-import { ArrowUpRightIcon } from "lucide-react";
-import React from "react";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
-
 export const FeaturesSection = () => {
   return (
     <section className="w-full max-w-[1088px] mx-auto px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">

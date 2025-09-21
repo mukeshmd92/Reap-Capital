@@ -1,6 +1,5 @@
 import { ICONS } from "../../../../assets";
 import SectionDivider from "../../../../components/SectionDivider/SectionDivider";
-import { TextReveal } from "../../../../components/ui/text-reveal";
 
 export const AboutUsSection = ({ id }: { id: string }) => {
   return (

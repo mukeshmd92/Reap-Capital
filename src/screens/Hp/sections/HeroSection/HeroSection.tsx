@@ -15,7 +15,7 @@ export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
       id={id}
-      className="overflow-hidden h-screen w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
+      className="overflow-hidden h-[50rem] w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
       style={{ backgroundImage: `url(${bg})` }}
       initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
       animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
@@ -67,13 +67,13 @@ export const HeroSection = ({ id }: { id: string }) => {
           animate={{ y: 0, opacity: 1 }} // slides down to normal position
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src={toparrow} alt="" />
+          <img src={toparrow} alt="" className="" />
         </motion.div>
 
         <img
           src={correctarrow}
           alt="arrow background"
-          className="absolute    md:ml-110 mt-58 md:mt-10 w-[490px] h-[400px]  md:w-180 md:h-auto  opacity-100 z-0"
+          className="absolute md:ml-110 mt-58 md:mt-10 w-[490px] h-[400px]  md:w-180 md:h-auto  opacity-100 z-0"
         />
       </div>
       <div className="absolute right-[160px] md:right-[704px] mt-[730px] md:mt-[455px]">
@@ -95,7 +95,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 1 }}
         />
       </div>
-      <div className="  absolute mt-137 mr-[-390px]   md:mt-87 md:mr-[-1370px]">
+      <div className="  absolute mt-137 mr-[-390px]  md:mt-87 md:mr-[-1370px]">
         <motion.img
           src={sidearrow}
           className="mix-blend-color-dodge h-30 md:h-50 md:w-53"
@@ -104,7 +104,6 @@ export const HeroSection = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.8 }}
         />
       </div>
-
       <div className="absolute mt-26 ml-[-330px] md:mt-25 md:ml-[-1180px]">
         <motion.img
           src={bluringimg}
@@ -114,7 +113,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           transition={{ duration: 1.5, ease: "easeOut" }}
         />
       </div>
-      <div className="  absolute mt-93 md:mt-111 ml-[-394px] md:ml-[-1300px]">
+      <div className="absolute mt-93 md:mt-111 ml-[-394px] md:ml-[-1300px]">
         <motion.img
           src={Rocket}
           className="h-46 md:h-61"
