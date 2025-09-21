@@ -1,5 +1,6 @@
 import { ICONS } from "../../../../assets";
 import SectionDivider from "../../../../components/SectionDivider/SectionDivider";
+import { TextReveal } from "../../../../components/ui/text-reveal";
 
 export const AboutUsSection = ({ id }: { id: string }) => {
   return (
@@ -42,10 +43,12 @@ export const AboutUsSection = ({ id }: { id: string }) => {
                 Quantum Leap.
               </h1>
             </div>
-            <p className="text-black text-[2.4rem] font-normal max-w-[70%] mx-auto -mt-4 pb-14">
-              We help business owners access money quickly. Whether it&apos;s to
-              grow, manage cash flow, or grab new opportunities, we&apos;re here
-              to make funding easy.
+            <p className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto mt-4 pb-1">
+              <TextReveal className="-mt-10 flex items-center justify-center text-center ">
+                We help business owners access money quickly. Whether it&apos;s
+                to grow, manage cash flow, or grab new opportunities, we&apos;re
+                here to make funding easy.
+              </TextReveal>
             </p>
 
             {/* overflow borders  */}
@@ -57,6 +60,20 @@ export const AboutUsSection = ({ id }: { id: string }) => {
             <div className="absolute bottom-0 left-0 w-full h-[3.5px] border-b-2 border-dashed border-b-gray-300 scale-x-[1.05]"></div>
             {/* top border  */}
             <div className="absolute top-0 left-0 w-full h-[3.5px] border-t-2 border-dashed border-t-gray-300 scale-x-[1.05]"></div>
+
+            {/* corner dots  */}
+            <div className="absolute -top-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300 ">
+              <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
+            </div>
+            <div className="absolute -top-2 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+              <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
+            </div>
+            <div className="absolute -bottom-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+              <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
+            </div>
+            <div className="absolute bottom-6 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+              <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
+            </div>
           </div>
         </div>
       </div>

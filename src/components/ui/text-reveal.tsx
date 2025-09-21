@@ -17,6 +17,7 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["start 70%", "end 80%"],
   });
 
   if (typeof children !== "string") {
@@ -27,16 +28,16 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
 
   return (
     <div>
-      <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
+      <div ref={targetRef} className={cn("relative z-0 h-[50vh]", className)}>
         <div
           className={
-            "sticky top-0 mx-auto flex max-w-4xl items-center bg-transparent px-[1rem]"
+            "sticky top-0 mx-auto flex max-w-4xl items-center justify-center bg-transparent px-[1rem] text-center mt-0"
           }
         >
           <span
             ref={targetRef}
             className={
-              "flex flex-wrap p-5 text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
+              "flex flex-wrap justify-center items-center p-5 text-xl text-center font-normal text-black/20 dark:text-white/20 md:p-8 md:text-2xl lg:p-10 lg:text-3xl xl:text-4xl leading-12 md:leading-12 lg:leading-12 xl:leading-12"
             }
           >
             {words.map((word, i) => {
@@ -64,11 +65,11 @@ interface WordProps {
 const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
-    <span className="xl:lg-3 relative mx-1 lg:mx-1.5">
+    <span className="xl:lg-3 relative mx-1 lg:mx-1.5 text-black/20 dark:text-white/20">
       <span className="absolute opacity-30">{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
+        className={"text-red-500 dark:text-[#000000]"}
       >
         {children}
       </motion.span>
