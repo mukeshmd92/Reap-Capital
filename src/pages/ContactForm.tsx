@@ -1,16 +1,15 @@
-
 import React, { useState } from "react";
-
+import Button from "../Button/Button";
 
 
 // Reusable Dropdown component
-const Dropdown = ({ options, placeholder, onSelect }) => {
+const Dropdown = ({ options, placeholder, onSelect }:any) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option:any) => {
     setSelectedValue(option);
     setIsOpen(false);
     onSelect(option); // send selected value to parent form
@@ -37,7 +36,7 @@ const Dropdown = ({ options, placeholder, onSelect }) => {
       {/* Dropdown Options */}
       {isOpen && (
         <div className="absolute placeholder-black mt-1 w-full bg-gray-100 border rounded shadow-lg z-10">
-          {options.map((option, index) => (
+          {options.map((option:any, index:any) => (
             <div
               key={index}
               onClick={() => handleOptionClick(option)}
@@ -62,15 +61,15 @@ const ContactForm = () => {
     vehicle: "",
   });
 
-  const handleInputChange = (field, value) => {
+  const handleInputChange = (field:any, value:any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSelect = (field, value) => {
+  const handleSelect = (field:any, value:any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     console.log("Form Data:", formData);
     alert(
@@ -110,21 +109,21 @@ const ContactForm = () => {
       <Dropdown
         options={["Apple", "Banana", "Cherry"]}
         placeholder="Less than 6 months"
-        onSelect={(value) => handleSelect("fruit", value)}
+        onSelect={(value:any) => handleSelect("fruit", value)}
       />
 
       {/* Dropdown 2 */}
       <Dropdown
         options={["Red", "Blue", "Green", "Yellow"]}
         placeholder="What's Your annual business revenue ?"
-        onSelect={(value) => handleSelect("color", value)}
+        onSelect={(value:any) => handleSelect("color", value)}
       />
 
       {/* Dropdown 3 */}
       <Dropdown
         options={["Car", "Bike", "Bus", "Train"]}
         placeholder="Is Your business GST registered ?"
-        onSelect={(value) => handleSelect("vehicle", value)}
+        onSelect={(value:any) => handleSelect("vehicle", value)}
       />
 
       {/* Submit Button */}

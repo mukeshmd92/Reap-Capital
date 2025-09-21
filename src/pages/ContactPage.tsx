@@ -1,10 +1,8 @@
 import React from 'react'
-import  ContactForm from './ContactForm'
 
-import ContactBg from '../assets/images/ContactBg.png'
 const ContactPage = () => {
   return (
-    <div   className='overflow-hidden h-screen w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl'
+   <div   className='overflow-hidden h-screen w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl'
       style={{ backgroundImage: `url(${ContactBg})` }}>
         <div className='flex  justify-between items-center gap-11 px-5'>
             <div className='flex flex-col gap-5 mt-[-50px] w-152  text-white items-start  '>
@@ -32,6 +30,8 @@ const ContactPage = () => {
               <ContactForm/>
             </div>
         </div>
+        
+    </div>
   )
 }
 
