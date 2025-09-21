@@ -19,8 +19,8 @@ export const SecuritySupportSection = () => {
     },
   ];
   return (
-    <section className="w-full py-14 px-8">
-      <div className="max-w-7xl mx-auto">
+    <section className="max-w-[87rem] mx-auto py-14 px-22 ">
+      <div className="">
         {/* Header Section */}
         <div className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
           <HeaderBrick text="Security" />

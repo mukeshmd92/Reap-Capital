@@ -10,9 +10,11 @@ import sidearrow from "../../../../assets/images/sidearrow.png";
 import toparrow from "../../../../assets/icons/toparrow.svg";
 import { motion } from "framer-motion";
 import BlackButton from "../../../../components/BlackButton/BlackButton";
-export const HeroSection = () => {
+import { TextAnimate } from "../../../../components/ui/text-animate";
+export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
+      id={id}
       className="overflow-hidden h-screen w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
       style={{ backgroundImage: `url(${bg})` }}
       initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
@@ -22,8 +24,28 @@ export const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center top-33  md:top-0   relative gap-25 z-10 text-center md:text-left">
         <div className="flex flex-col  text-white gap-7 md:gap-10">
           <div className="flex flex-col gap-2 md:gap-3  text-3xl sm:text-3xl md:text-6xl">
-            <h1>Get quick, no-fuss loans</h1>
-            <h1 className=" font-bold">for your business</h1>
+            <h1>
+              <TextAnimate
+                animation="blurInUp"
+                by="character"
+                once
+                delay={1.2}
+                duration={0.9}
+              >
+                Get quick, no-fuss loans
+              </TextAnimate>
+            </h1>
+            <h1 className=" font-bold">
+              <TextAnimate
+                animation="blurInUp"
+                by="character"
+                once
+                delay={1.2}
+                duration={0.9}
+              >
+                for your business
+              </TextAnimate>
+            </h1>
           </div>
           <p className="text-lg max-w-lg">
             No delays. No hidden terms. Just fast and flexible finance when you

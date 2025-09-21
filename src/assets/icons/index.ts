@@ -18,6 +18,9 @@ import employee from "./employee.png";
 
 import quantumLeap from "./quantumLeap.png";
 
+import reapCapitalBlack from "./ReapLogo-black.png";
+import reapCapitalWhite from "./ReapLogo-white.png";
+
 export {
   logo,
   LeftRocket,
@@ -36,4 +39,6 @@ export {
   connected,
   employee,
   quantumLeap,
+  reapCapitalBlack,
+  reapCapitalWhite,
 };

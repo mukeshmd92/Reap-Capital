@@ -1,20 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const Dropdown = ({ options, placeholder }) => {
+const Dropdown = ({ options, placeholder }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option: any) => {
     setSelectedValue(option);
     setIsOpen(false);
   };
 
   // Close dropdown if clicked outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: any) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
@@ -42,7 +42,7 @@ const Dropdown = ({ options, placeholder }) => {
       {/* Dropdown Options */}
       {isOpen && (
         <div className="absolute mt-1 w-full bg-white border rounded shadow-lg z-10">
-          {options.map((option, index) => (
+          {options.map((option: any, index: any) => (
             <div
               key={index}
               onClick={() => handleOptionClick(option)}
@@ -57,25 +57,38 @@ const Dropdown = ({ options, placeholder }) => {
   );
 };
 
-const FormDropdown= () => {
+const FormDropdown = () => {
+  const handleSelect = (field: any, value: any) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const [formData, setFormData] = useState({
+    fruit: "",
+    color: "",
+    vehicle: "",
+  });
+
   return (
     <div className="p-5">
       {/* Dropdown 1 */}
       <Dropdown
         options={["Apple", "Banana", "Cherry"]}
         placeholder="Select Fruit"
+        onSelect={(value: any) => handleSelect("fruit", value)}
       />
 
       {/* Dropdown 2 */}
       <Dropdown
         options={["Red", "Blue", "Green", "Yellow"]}
         placeholder="Select Color"
+        onSelect={(value: any) => handleSelect("color", value)}
       />
 
       {/* Dropdown 3 */}
       <Dropdown
         options={["Car", "Bike", "Bus", "Train"]}
         placeholder="Select Vehicle"
+        onSelect={(value: any) => handleSelect("vehicle", value)}
       />
     </div>
   );

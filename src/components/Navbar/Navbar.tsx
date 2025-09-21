@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import ReapLogo from "../../assets/icons/ReapLogo.png";
+import { ICONS } from "../../assets";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [visibleSection, setVisibleSection] = useState<string>("");
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,28 +22,44 @@ const Navbar = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisibleSection(entry.target.id);
+          if (entry.target.id === "hero") {
+            // Hero section visibility
+            setIsHeroVisible(entry.isIntersecting);
+          } else {
+            // Other sections visibility
+            if (entry.isIntersecting) {
+              setVisibleSection(entry.target.id);
+            }
           }
         });
       },
       {
-        threshold: 0.3, // Trigger when 30% of section is visible
-        rootMargin: "-100px 0px -100px 0px", // Add some margin to avoid premature triggering
+        threshold: 0.1, // Trigger when 10% of section is visible
+        rootMargin: "-50px 0px -50px 0px", // Add some margin to avoid premature triggering
       }
     );
 
     // Observe the sections
+    const heroSection = document.getElementById("hero");
     const aboutSection = document.getElementById("about");
     const teamSection = document.getElementById("team");
 
+    if (heroSection) observer.observe(heroSection);
     if (aboutSection) observer.observe(aboutSection);
     if (teamSection) observer.observe(teamSection);
 
     return () => {
+      if (heroSection) observer.unobserve(heroSection);
       if (aboutSection) observer.unobserve(aboutSection);
       if (teamSection) observer.unobserve(teamSection);
     };
+  }, [isHomePage]);
+
+  // Reset hero visibility when not on home page
+  useEffect(() => {
+    if (!isHomePage) {
+      setIsHeroVisible(false); // Use black logo on other pages
+    }
   }, [isHomePage]);
 
   const scrollToSection = (sectionId: string) => {
@@ -82,51 +99,72 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-transparent z-50">
-      <div className=" max-w-7xl mx-auto  flex flex-row justify-between  items-center py-6 lg:py-5 lg:4 lg:px-24  md:px-20 px-7 ">
+      <div className=" max-w-[87rem] mx-auto  flex flex-row justify-between  items-center py-6 lg:py-5 lg:4 lg:px-24  md:px-20 px-7 ">
         <div>
           <Link to="/">
-            <img className="w-32 md:w-32 " src={ReapLogo} alt="" />
+            <img
+              className="w-[9rem] transition-all duration-300"
+              src={
+                isContactPage || isHeroVisible
+                  ? ICONS.reapCapitalWhite
+                  : ICONS.reapCapitalBlack
+              }
+              alt=""
+            />
           </Link>
         </div>
 
-        <div className="hidden md:flex bg-green-50 border-4 border-white rounded-xl">
-          <ul className="flex flex-row item-center border-white  gap-1  p-1.5 font-medium text-gray-800 ">
+        <div className="hidden md:flex bg-gray-100 border-4 border-white rounded-2xl shadow-lg">
+          <ul className="flex flex-row item-center border-white  gap-1  p-1 font-medium text-gray-800 ">
             <li
-              className={`py-1 px-4 rounded-lg transition-all duration-200 ${
+              className={`py-2.5 px-6 flex items-center justify-center rounded-lg transition-all duration-200 ${
                 isHomePage && visibleSection === "about"
-                  ? "border-2 border-green-500 "
-                  : "border-2 border-transparent"
+                  ? "border-1 border-green-500 "
+                  : "border-1 border-transparent"
               }`}
             >
               <button
                 onClick={navigateToAbout}
-                className="hover:text-green-600 cursor-pointer"
+                className={`hover:text-green-600 cursor-pointer text-md ${
+                  isHomePage && visibleSection === "about"
+                    ? "text-green-600"
+                    : "text-gray-800"
+                }`}
               >
                 About
               </button>
             </li>
             <li
-              className={`py-1 px-4 rounded-lg transition-all duration-200 ${
+              className={`py-2.5 px-6 flex items-center justify-center rounded-lg transition-all duration-200 ${
                 isHomePage && visibleSection === "team"
-                  ? "border-2 border-green-500 "
-                  : "border-2 border-transparent"
+                  ? "border-1 border-green-500 "
+                  : "border-1 border-transparent"
               }`}
             >
               <button
-                className="hover:text-green-600 cursor-pointer"
+                className={`hover:text-green-600 cursor-pointer text-md ${
+                  isHomePage && visibleSection === "team"
+                    ? "text-green-600"
+                    : "text-gray-800"
+                }`}
                 onClick={navigateToTeam}
               >
                 Team
               </button>
             </li>
             <li
-              className={`py-1 px-4 rounded-lg transition-all duration-200 ${
+              className={`py-2.5 px-6 flex items-center justify-center rounded-lg transition-all duration-200 ${
                 isContactPage
-                  ? "border-2 border-green-500 "
-                  : "border-2 border-transparent"
+                  ? "border-1 border-green-500 "
+                  : "border-1 border-transparent"
               }`}
             >
-              <Link className="hover:text-green-600" to="/contact">
+              <Link
+                className={`hover:text-green-600 text-md ${
+                  isContactPage ? "text-green-600" : "text-gray-800"
+                }`}
+                to="/contact"
+              >
                 Contact
               </Link>
             </li>
@@ -160,13 +198,13 @@ const Navbar = () => {
               <li
                 className={`py-2 px-4 rounded-lg transition-all duration-200 ${
                   isHomePage && visibleSection === "about"
-                    ? "border-2 border-green-500 shadow-lg"
-                    : "border-2 border-transparent"
+                    ? "border-1 border-green-500 shadow-lg"
+                    : "border-1 border-transparent"
                 }`}
               >
                 <button
                   onClick={navigateToAbout}
-                  className="hover:text-green-600 cursor-pointer"
+                  className="hover:text-green-600 cursor-pointer text-md"
                 >
                   About
                 </button>
@@ -174,13 +212,13 @@ const Navbar = () => {
               <li
                 className={`py-2 px-4 rounded-lg transition-all duration-200 ${
                   isHomePage && visibleSection === "team"
-                    ? "border-2 border-green-500 shadow-lg"
-                    : "border-2 border-transparent"
+                    ? "border-1 border-green-500 shadow-lg"
+                    : "border-1 border-transparent"
                 }`}
               >
                 <button
                   onClick={navigateToTeam}
-                  className="hover:text-green-600 cursor-pointer"
+                  className="hover:text-green-600 cursor-pointer text-md"
                 >
                   Team
                 </button>
@@ -188,13 +226,13 @@ const Navbar = () => {
               <li
                 className={`py-2 px-4 rounded-lg transition-all duration-200 ${
                   isContactPage
-                    ? "border-2 border-green-500 shadow-lg"
-                    : "border-2 border-transparent"
+                    ? "border-1 border-green-500 shadow-lg"
+                    : "border-1 border-transparent"
                 }`}
               >
                 <Link
                   onClick={() => setIsOpen(false)}
-                  className="hover:text-green-600"
+                  className="hover:text-green-600 text-md"
                   to="/contact"
                 >
                   Contact

@@ -75,7 +75,7 @@ const FaqSection = () => {
       </div>
 
       <div className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[87rem] px-24 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column */}
             <div>

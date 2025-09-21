@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import Button from "../Button/Button";
-
+import BlackButton from "../components/BlackButton/BlackButton";
 
 // Reusable Dropdown component
-const Dropdown = ({ options, placeholder, onSelect }:any) => {
+const Dropdown = ({ options, placeholder, onSelect }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const handleOptionClick = (option:any) => {
+  const handleOptionClick = (option: any) => {
     setSelectedValue(option);
     setIsOpen(false);
     onSelect(option); // send selected value to parent form
@@ -19,7 +18,6 @@ const Dropdown = ({ options, placeholder, onSelect }:any) => {
     <div className="w-full relative mb-4">
       {/* Input + Arrow */}
       <div
-      
         className="flex items-center  rounded px-3 py-2 cursor-pointer bg-gray-200"
         onClick={toggleDropdown}
       >
@@ -36,7 +34,7 @@ const Dropdown = ({ options, placeholder, onSelect }:any) => {
       {/* Dropdown Options */}
       {isOpen && (
         <div className="absolute placeholder-black mt-1 w-full bg-gray-100 border rounded shadow-lg z-10">
-          {options.map((option:any, index:any) => (
+          {options.map((option: any, index: any) => (
             <div
               key={index}
               onClick={() => handleOptionClick(option)}
@@ -61,19 +59,19 @@ const ContactForm = () => {
     vehicle: "",
   });
 
-  const handleInputChange = (field:any, value:any) => {
+  const handleInputChange = (field: any, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSelect = (field:any, value:any) => {
+  const handleSelect = (field: any, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("Form Data:", formData);
     alert(
-      `Form Submitted:\nName1: ${formData.name1}\nphone: ${formData.name2}\nFruit: ${formData.fruit}\nColor: ${formData.color}\nVehicle: ${formData.vehicle}`
+      `Form Submitted:\nName1: ${formData.name1}\nphone: ${formData.phone}\nFruit: ${formData.fruit}\nColor: ${formData.color}\nVehicle: ${formData.vehicle}`
     );
   };
 
@@ -90,56 +88,57 @@ const ContactForm = () => {
           required
           value={formData.name1}
           onChange={(e) => handleInputChange("name1", e.target.value)}
-          className="flex-1   w-5 bg-gray-200 rounded px-3 py-2"
+          className="flex-1  w-5 bg-gray-300 rounded px-3 py-2"
           placeholder="Name as per PAN Card"
         />
-       <input
-  type="tel"
-   required
-  value={formData.phone}
-  onChange={(e) => handleInputChange("phone", e.target.value)}
-  className="flex-1 bg-gray-200  rounded px-3 py-2"
-  placeholder="Mobile Number"
-  maxLength={10}
-/>
-
+        <input
+          type="tel"
+          required
+          value={formData.phone}
+          onChange={(e) => handleInputChange("phone", e.target.value)}
+          className="flex-1 bg-gray-200  rounded px-3 py-2"
+          placeholder="Mobile Number"
+          maxLength={10}
+        />
       </div>
 
       {/* Dropdown 1 */}
       <Dropdown
         options={["Apple", "Banana", "Cherry"]}
         placeholder="Less than 6 months"
-        onSelect={(value:any) => handleSelect("fruit", value)}
+        onSelect={(value: any) => handleSelect("fruit", value)}
       />
 
       {/* Dropdown 2 */}
       <Dropdown
         options={["Red", "Blue", "Green", "Yellow"]}
         placeholder="What's Your annual business revenue ?"
-        onSelect={(value:any) => handleSelect("color", value)}
+        onSelect={(value: any) => handleSelect("color", value)}
       />
 
       {/* Dropdown 3 */}
       <Dropdown
         options={["Car", "Bike", "Bus", "Train"]}
         placeholder="Is Your business GST registered ?"
-        onSelect={(value:any) => handleSelect("vehicle", value)}
+        onSelect={(value: any) => handleSelect("vehicle", value)}
       />
 
       {/* Submit Button */}
-      <Button
+      {/* <Button
         type="submit"
         className="mt-4 w-101  text-white py-2 "
       >
         Check Eligibility Now
-      </Button>
+      </Button> */}
+
+      <BlackButton text="Check Eligibility Now" />
 
       <div className="py-4">
         <p className="text-xs">
           By clicking on Check Loan Eligibility, you agree to our T&C and
-          Privacy Policy. With your authorization, (Name of the
-          authorisation) and our trusted lending partners will securely access
-          your credit report to customise the best loan offers for you.
+          Privacy Policy. With your authorization, (Name of the authorisation)
+          and our trusted lending partners will securely access your credit
+          report to customise the best loan offers for you.
         </p>
       </div>
     </form>

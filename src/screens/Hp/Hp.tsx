@@ -1,5 +1,4 @@
 import { AboutUsSection } from "./sections/AboutUsSection/AboutUsSection";
-import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
 import CheckEligibilitySection from "./sections/CheckEligibilitySection/CheckEligibilitySection";
 import FaqSection from "./sections/FaqSection/FaqSection";
 import { FooterSection } from "./sections/FooterSection/FooterSection";
@@ -15,7 +14,7 @@ export const Hp = () => {
     <div className="bg-white w-full min-h-screen" data-model-id="221:2">
       <div className="bg-white w-full relative">
         {/* Hero Section with Background Images */}
-        <HeroSection />
+        <HeroSection id="hero" />
 
         <AboutUsSection id="about" />
         {/* Stats Cards Section */}

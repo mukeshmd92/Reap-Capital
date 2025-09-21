@@ -1,8 +1,13 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion, MotionProps, Variants } from "motion/react";
-import { ElementType, memo } from "react";
+import { cn } from "../../lib/utils";
+import {
+  AnimatePresence,
+  motion,
+  type MotionProps,
+  type Variants,
+} from "motion/react";
+import { type ElementType, memo } from "react";
 
 type AnimationType = "text" | "word" | "character" | "line";
 type AnimationVariant =
@@ -358,27 +363,27 @@ const TextAnimateBase = ({
         item: variants,
       }
     : animation
-      ? {
-          container: {
-            ...defaultItemAnimationVariants[animation].container,
-            show: {
-              ...defaultItemAnimationVariants[animation].container.show,
-              transition: {
-                delayChildren: delay,
-                staggerChildren: duration / segments.length,
-              },
-            },
-            exit: {
-              ...defaultItemAnimationVariants[animation].container.exit,
-              transition: {
-                staggerChildren: duration / segments.length,
-                staggerDirection: -1,
-              },
+    ? {
+        container: {
+          ...defaultItemAnimationVariants[animation].container,
+          show: {
+            ...defaultItemAnimationVariants[animation].container.show,
+            transition: {
+              delayChildren: delay,
+              staggerChildren: duration / segments.length,
             },
           },
-          item: defaultItemAnimationVariants[animation].item,
-        }
-      : { container: defaultContainerVariants, item: defaultItemVariants };
+          exit: {
+            ...defaultItemAnimationVariants[animation].container.exit,
+            transition: {
+              staggerChildren: duration / segments.length,
+              staggerDirection: -1,
+            },
+          },
+        },
+        item: defaultItemAnimationVariants[animation].item,
+      }
+    : { container: defaultContainerVariants, item: defaultItemVariants };
 
   return (
     <AnimatePresence mode="popLayout">
@@ -402,7 +407,7 @@ const TextAnimateBase = ({
             className={cn(
               by === "line" ? "block" : "inline-block whitespace-pre",
               by === "character" && "",
-              segmentClassName,
+              segmentClassName
             )}
             aria-hidden={accessible ? true : undefined}
           >

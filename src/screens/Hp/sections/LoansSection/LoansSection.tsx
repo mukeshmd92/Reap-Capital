@@ -73,7 +73,7 @@ const LoansSection = () => {
 
                 {/* Content Section */}
                 <div className="flex-1  h-full overflow-visible ">
-                  <div className="bg-white rounded-[10px_14px_14px_10px] p-5 h-[100%] shadow-[0px_13px_28px_#0000001a,0px_11px_51px_#00000017,0px_115px_69px_#0000000d,0px_205px_82px_#00000003,0px_320px_90px_transparent] relative">
+                  <div className="bg-white flex flex-col justify-between rounded-[10px_14px_14px_10px] p-5 h-[100%] shadow-[0px_13px_28px_#0000001a,0px_11px_51px_#00000017,0px_115px_69px_#0000000d,0px_205px_82px_#00000003,0px_320px_90px_transparent] relative">
                     {/* Title and Description */}
                     <div className="mb-6">
                       <h3 className="[font-family:'Inter_Variable-SemiBold',Helvetica] font-semibold text-black text-2xl tracking-[0] leading-[normal] mb-[21px]">
@@ -85,14 +85,17 @@ const LoansSection = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <div className="absolute bottom-5 left-5">
-                      <Button
-                        variant="link"
-                        className="h-auto p-0 [font-family:'Inter_Variable-Medium',Helvetica] font-medium text-[#0aa26c] text-lg text-center tracking-[-0.54px] leading-[normal] underline hover:no-underline transition-all duration-300"
-                      >
-                        Let&apos;s Start
-                        <ArrowUpRightIcon className="w-5 h-5 ml-1" />
-                      </Button>
+                    <div
+                      className=" flex flex-row gap-2 items-center cursor-pointer group"
+                      onClick={() => {
+                        window.location.href = "/contact";
+                      }}
+                    >
+                      <div className="underline font-medium text-green-700 text-lg">
+                        {" "}
+                        Let&apos;s Starts
+                      </div>
+                      <ArrowUpRightIcon className="cursor-pointer group-hover:rotate-45 transition-all duration-300 text-green-600" />
                     </div>
                   </div>
                 </div>
