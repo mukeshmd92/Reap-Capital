@@ -1,5 +1,6 @@
 import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { motion } from "framer-motion";
 
 const MyTeamSection = ({ id }: { id: string }) => {
   const teamMembers = [
@@ -32,14 +33,24 @@ const MyTeamSection = ({ id }: { id: string }) => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <header className="flex flex-col items-center mb-8 md:mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
-          <HeaderBrick text="Team" />
+        <motion.div
+          className="flex flex-col items-center mb-16"
+          initial={{ opacity: 0, y: 90 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
+            <HeaderBrick text="Team" />
 
-          <h2 className=" flex flex-col items-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] leading-[40px] md:leading-[58px] [font-family:'Poppins',Helvetica] max-w-md">
-            <span className="text-black tracking-[-0.69px]">About the </span>
-            <span className="text-[#0aa26c] tracking-[-0.69px]">Founders</span>
-          </h2>
-        </header>
+            <h2 className=" flex flex-col items-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] leading-[40px] md:leading-[58px] [font-family:'Poppins',Helvetica] max-w-md">
+              <span className="text-black tracking-[-0.69px]">About the </span>
+              <span className="text-[#0aa26c] tracking-[-0.69px]">
+                Founders
+              </span>
+            </h2>
+          </header>
+        </motion.div>
 
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start max-w-6xl mx-auto">
