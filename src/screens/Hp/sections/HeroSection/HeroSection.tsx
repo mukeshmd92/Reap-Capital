@@ -1,4 +1,3 @@
-
 import humanarrow from "../../../../assets/images/humanarrow.png";
 
 import correctarrow from "../../../../assets/icons/correctarrow.png";
@@ -10,7 +9,7 @@ import down2 from "../../../../assets/images/down2.png";
 import sidearrow from "../../../../assets/images/sidearrow.png";
 import toparrow from "../../../../assets/icons/toparrow.svg";
 import { motion } from "framer-motion";
-import { Button } from "../../../../components/ui/button";
+import BlackButton from "../../../../components/BlackButton/BlackButton";
 export const HeroSection = () => {
   return (
     <motion.div
@@ -26,11 +25,11 @@ export const HeroSection = () => {
             <h1>Get quick, no-fuss loans</h1>
             <h1 className=" font-bold">for your business</h1>
           </div>
-          <p>
+          <p className="text-lg max-w-lg">
             No delays. No hidden terms. Just fast and flexible finance when you
             need it the most.
           </p>
-          <Button>Let's Start</Button>
+          <BlackButton text="Let's Start" className="w-[206px] ml-0" />
         </div>
 
         <div className="relative w-[360px] h-[400px] top-[-80px] md:top-[0]  flex items-center justify-center">

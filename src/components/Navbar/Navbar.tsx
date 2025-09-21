@@ -89,7 +89,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="hidden md:flex bg-amber-50 border-4 border-white rounded-xl">
+        <div className="hidden md:flex bg-green-50 border-4 border-white rounded-xl">
           <ul className="flex flex-row item-center border-white  gap-1  p-1.5 font-medium text-gray-800 ">
             <li
               className={`py-1 px-4 rounded-lg transition-all duration-200 ${
