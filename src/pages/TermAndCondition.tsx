@@ -84,7 +84,7 @@ const TermAndCondition = () => {
 </motion.div>
 <div>
 <div className='px-50'>
-  <h2 className="text-2xl font-bold my-6">
+  <h2 className="text-2xl font-bold my-8">
     COMPREHENSIVE TERMS OF USE, PRIVACY POLICY & DATA PROTECTION POLICY
   </h2>
 

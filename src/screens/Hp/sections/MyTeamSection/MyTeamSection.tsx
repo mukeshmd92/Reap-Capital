@@ -1,6 +1,7 @@
 import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
 import { Badge } from "../../../../components/ui/badge";
 import { Card, CardContent } from "../../../../components/ui/card";
+import { motion } from "framer-motion";
 
 const MyTeamSection = ({ id }: { id: string }) => {
   const teamMembers = [
@@ -28,8 +29,16 @@ const MyTeamSection = ({ id }: { id: string }) => {
   ];
   return (
     <section className="w-full self-center relative px-4 pb-[7rem]" id={id}>
+      
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
+          <motion.div
+        className="flex flex-col items-center mb-16"
+        initial={{ opacity: 0, y: 90 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
           <HeaderBrick text="Team" />
 
@@ -38,6 +47,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
             <span className="text-[#0aa26c] tracking-[-0.69px]">Founders</span>
           </h2>
         </header>
+        </motion.div>
 
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start   max-w-6xl mx-auto">
