@@ -99,11 +99,11 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-transparent z-50">
-      <div className=" max-w-[87rem] mx-auto  flex flex-row justify-between  items-center py-6 lg:py-5 lg:4 lg:px-24  md:px-20 px-7 ">
+      <div className=" max-w-7xl mx-auto  flex flex-row justify-between  items-center py-6 lg:py-5 lg:4 lg:px-24  md:px-20 px-7 ">
         <div>
           <Link to="/">
             <img
-              className="w-[9rem] transition-all duration-300"
+              className="w-32 transition-all duration-300"
               src={
                 isContactPage || isHeroVisible
                   ? ICONS.reapCapitalWhite
@@ -115,9 +115,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex bg-gray-100 border-4 border-white rounded-2xl shadow-lg">
-          <ul className="flex flex-row item-center border-white  gap-1  p-1 font-medium text-gray-800 ">
+          <ul className="flex flex-row item-center border-white  gap-1  p-1 text-sm font-medium text-gray-800 ">
             <li
-              className={`py-2.5 px-6 flex items-center justify-center rounded-lg transition-all duration-200 ${
+              className={`py-2 px-4 flex items-center justify-center rounded-lg transition-all duration-200 ${
                 isHomePage && visibleSection === "about"
                   ? "border-1 border-green-500 "
                   : "border-1 border-transparent"
@@ -135,7 +135,7 @@ const Navbar = () => {
               </button>
             </li>
             <li
-              className={`py-2.5 px-6 flex items-center justify-center rounded-lg transition-all duration-200 ${
+              className={`py-2 px-4 flex items-center justify-center rounded-lg transition-all duration-200 ${
                 isHomePage && visibleSection === "team"
                   ? "border-1 border-green-500 "
                   : "border-1 border-transparent"
@@ -153,7 +153,7 @@ const Navbar = () => {
               </button>
             </li>
             <li
-              className={`py-2.5 px-6 flex items-center justify-center rounded-lg transition-all duration-200 ${
+              className={`py-2 px-4 flex items-center justify-center rounded-lg transition-all duration-200 ${
                 isContactPage
                   ? "border-1 border-green-500 "
                   : "border-1 border-transparent"

@@ -34,7 +34,7 @@ const LoansSection = () => {
   ];
 
   return (
-    <section className="w-full px-4 py-16">
+    <section className="w-full px-24 py-16">
       {/* Header */}
       <motion.header
         className="flex flex-col items-center mb-16"
@@ -59,7 +59,7 @@ const LoansSection = () => {
       </motion.header>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[75rem] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[68rem] mx-auto">
         {featuresData.map((feature, index) => (
           <motion.div
             key={index}
@@ -88,7 +88,7 @@ const LoansSection = () => {
                         <h3 className="font-semibold text-black text-2xl mb-[21px]">
                           {feature.title}
                         </h3>
-                        <p className="text-neutral-700 text-base leading-[26px]">
+                        <p className="text-neutral-700 w-74 text-base leading-[24px]">
                           {feature.description}
                         </p>
                       </div>
