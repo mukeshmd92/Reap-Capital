@@ -27,46 +27,51 @@ const MyTeamSection = ({ id }: { id: string }) => {
     },
   ];
   return (
-    <section className="w-full self-center relative px-4 pb-[7rem]" id={id}>
-      
+    <section
+      className="w-full self-center relative px-4 pb-8 md:pb-[7rem]"
+      id={id}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-          <motion.div
-        className="flex flex-col items-center mb-16"
-        initial={{ opacity: 0, y: 90 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
-          <HeaderBrick text="Team" />
+        <motion.div
+          className="flex flex-col items-center mb-16"
+          initial={{ opacity: 0, y: 90 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
+            <HeaderBrick text="Team" />
 
-          <h2 className=" flex flex-col items-center text-5xl font-medium text-center tracking-[-1.44px] leading-[58px] [font-family:'Poppins',Helvetica] max-w-md">
-            <span className="text-black tracking-[-0.69px]">About the </span>
-            <span className="text-[#0aa26c] tracking-[-0.69px]">Founders</span>
-          </h2>
-        </header>
+            <h2 className=" flex flex-col items-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] leading-[40px] md:leading-[58px] [font-family:'Poppins',Helvetica] max-w-md">
+              <span className="text-black tracking-[-0.69px]">About the </span>
+              <span className="text-[#0aa26c] tracking-[-0.69px]">
+                Founders
+              </span>
+            </h2>
+          </header>
         </motion.div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start   max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start max-w-6xl mx-auto">
           {/* Rajiv Talreja - Large Profile */}
-          <div className="lg:col-span-2 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]  ">
+          <div className="lg:col-span-2 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             <Card className="border-0 shadow-none bg-transparent">
               <CardContent className="p-0">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div className="order-2 lg:order-1">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
+                  {/* Image first on mobile, then text */}
+                  <div className="order-1 lg:order-1">
                     <img
                       src={teamMembers[0].image}
                       alt={teamMembers[0].name}
                       className="w-full h-auto max-w-[498px]"
                     />
                   </div>
-                  <div className="order-1 lg:order-2 flex flex-col justify-start pt-0 lg:pt-8">
-                    <h3 className="text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-6">
+                  <div className="order-2 lg:order-2 flex flex-col justify-start pt-0 lg:pt-8">
+                    <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-4 md:mb-6">
                       {teamMembers[0].name}
                     </h3>
-                    <p className="text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica] max-w-lg">
+                    <p className="text-sm md:text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica] max-w-lg">
                       {teamMembers[0].description}
                     </p>
                   </div>
@@ -83,12 +88,12 @@ const MyTeamSection = ({ id }: { id: string }) => {
                   <img
                     src={teamMembers[1].image}
                     alt={teamMembers[1].name}
-                    className="w-full h-auto max-w-[509px] mb-6"
+                    className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-4">
+                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-3 md:mb-4">
                     {teamMembers[1].name}
                   </h3>
-                  <p className="text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica]">
+                  <p className="text-sm md:text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica]">
                     {teamMembers[1].description}
                   </p>
                 </div>
@@ -104,12 +109,12 @@ const MyTeamSection = ({ id }: { id: string }) => {
                   <img
                     src={teamMembers[2].image}
                     alt={teamMembers[2].name}
-                    className="w-full h-auto max-w-[509px] mb-6"
+                    className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-4">
+                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-3 md:mb-4">
                     {teamMembers[2].name}
                   </h3>
-                  <p className="text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica]">
+                  <p className="text-sm md:text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica]">
                     {teamMembers[2].description}
                   </p>
                 </div>
