@@ -1,5 +1,6 @@
 import { Badge } from "../../../../components/ui/badge";
 import CustomAccordion from "../../../../components/ui/custom-accordion";
+import { motion } from "framer-motion";
 
 const FaqSection = () => {
   const faqItems = [
@@ -58,8 +59,13 @@ const FaqSection = () => {
   const rightColumnItems = faqItems.slice(5);
 
   return (
-    <section className="w-full px-4 py-16 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:2400ms]">
-      <div className="max-w-2xl mx-auto text-center">
+    <section className="w-full px-4 py-16 ">
+      <motion.div
+                      initial={{ opacity: 0, y: 40 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                      viewport={{ once: true }}
+       className="max-w-2xl mx-auto text-center">
         <Badge className="mb-4 p-[0.5rem] px-[1.5rem] bg-white rounded-tl-3xl text-lg border border-solid border-[#1caa7b]  text-[#109157] font-semibold">
           FAQs
         </Badge>
@@ -72,7 +78,7 @@ const FaqSection = () => {
             Need to Know
           </span>
         </h2>
-      </div>
+      </motion.div>
 
       <div className="py-16 px-4 bg-white">
         <div className="max-w-[87rem] px-24 mx-auto">

@@ -29,8 +29,8 @@ export const HeroSection = ({ id }: { id: string }) => {
                 animation="blurInUp"
                 by="character"
                 once
-                delay={1.2}
-                duration={0.9}
+                delay={1.8}
+                duration={1}
               >
                 Get quick, no-fuss loans
               </TextAnimate>
@@ -40,18 +40,34 @@ export const HeroSection = ({ id }: { id: string }) => {
                 animation="blurInUp"
                 by="character"
                 once
-                delay={1.2}
-                duration={0.9}
+                delay={1.8}
+                duration={1}
               >
                 for your business
               </TextAnimate>
             </h1>
           </div>
-          <p className="text-lg max-w-lg">
+          <motion.p
+             
+              initial={{ opacity: 0, y: 100 }} // start below + invisible
+              whileInView={{ opacity: 1, y: 0 }} // move up into place
+              transition={{ duration: 1, delay: 1.8 }} // staggered animation
+              viewport={{ once: true }} // animate only once
+               className="text-lg max-w-lg">
             No delays. No hidden terms. Just fast and flexible finance when you
             need it the most.
-          </p>
-          <BlackButton text="Let's Start" className="w-[206px] ml-0" />
+          </motion.p>
+
+           <motion.div
+              
+              initial={{ opacity: 0, y: 100 }} // start below + invisible
+              whileInView={{ opacity: 1, y: 0 }} // move up into place
+              transition={{ duration: 1, delay: 1.8 }} // staggered animation
+              viewport={{ once: true }} // animate only once
+            >
+              <BlackButton text="Let's Start" className="w-[206px] ml-0" />
+            </motion.div>
+          
         </div>
 
         <div className="relative w-[360px] h-[400px] top-[-80px] md:top-[0]  flex items-center justify-center">
@@ -82,7 +98,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="w-43 h-50 md:w-90 md:h-98 rotate-120deg] shrink-0 aspect-[201.17/301.89]"
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{ duration: 1, delay: 1.8}}
         />
       </div>
 
@@ -92,7 +108,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           src={down2}
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
+          transition={{  duration: 1, delay: 1.8}}
         />
       </div>
       <div className="  absolute mt-137 mr-[-390px]  md:mt-87 md:mr-[-1370px]">
@@ -101,7 +117,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="mix-blend-color-dodge h-30 md:h-50 md:w-53"
           initial={{ rotate: 90, x: 200, opacity: 0 }}
           animate={{ rotate: 290, x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{  duration: 1, delay: 1.8 }}
         />
       </div>
       <div className="absolute mt-26 ml-[-330px] md:mt-25 md:ml-[-1180px]">
@@ -119,7 +135,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="h-46 md:h-61"
           initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 2, type: "spring" }}
+          transition={{ duration: 1, delay: 1.8 }}
         />
       </div>
     </motion.div>
