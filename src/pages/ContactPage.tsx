@@ -5,9 +5,9 @@ import { BadgeCheck } from "lucide-react";
 import { TextAnimate } from "../components/ui/text-animate";
 const ContactPage = () => {
   return (
-    <>
+    <div className="bg-black">
       <div
-        className="overflow-hidden h-screen w-full relative flex justify-center bg-cover bg-center rounded-b-4xl"
+        className="overflow-hidden h-screen w-full relative flex justify-center bg-cover bg-center rounded-b-4xl bg-black"
         style={{ backgroundImage: `url(${ContactBg})` }}
       >
         <div className=" w-[75rem] flex justify-between items-center  ">
@@ -62,8 +62,9 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+
       <FooterSection />
-    </>
+    </div>
   );
 };
 

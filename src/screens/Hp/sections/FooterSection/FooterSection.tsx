@@ -1,6 +1,10 @@
 import { ICONS } from "../../../../assets";
-
+import { useNavigate, Link } from "react-router-dom";
 export const FooterSection = () => {
+  const navigate = useNavigate();
+  const navigateToTerms = () => {
+    navigate("/terms-and-conditions");
+  };
   return (
     <footer className="relative w-full bg-black overflow-hidden flex flex-col items-center py-22">
       {/* Main logo section */}
@@ -24,16 +28,26 @@ export const FooterSection = () => {
         <div className="w-full h-px bg-white/10"></div>
 
         {/* Content between lines */}
-        <div className="flex justify-between items-center py-6">
+        <div className="flex justify-between items-center py-6 relative z-10">
           {/* Copyright text */}
           <span className="text-white text-md">
             All copyrights reserve at @ReapCapital
           </span>
 
           {/* Terms and Conditions link */}
-          <span className="text-green-400 text-sm hover:text-teal-300 transition-colors hover:cursor-pointer">
+          <Link
+            to="/terms-and-conditions"
+            className="text-green-400 text-sm hover:text-teal-300 transition-colors cursor-pointer select-none relative z-20"
+            onClick={navigateToTerms}
+            style={{
+              cursor: "pointer",
+              pointerEvents: "auto",
+              zIndex: 999,
+              textDecoration: "none",
+            }}
+          >
             Terms and Conditions
-          </span>
+          </Link>
         </div>
 
         {/* Second line */}

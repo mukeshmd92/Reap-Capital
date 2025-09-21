@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import BlackButton from "../components/BlackButton/BlackButton";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
@@ -6,6 +6,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const Dropdown = ({ options, placeholder, onSelect }: any) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -15,8 +16,22 @@ const Dropdown = ({ options, placeholder, onSelect }: any) => {
     onSelect(option); // send selected value to parent form
   };
 
+  // Close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <div className="w-full relative mb-4">
+    <div className="w-full relative mb-4" ref={dropdownRef}>
       {/* Input + Arrow */}
       <div
         className="flex items-center  rounded-lg px-3 py-3 cursor-pointer bg-[#f0f0f0]"
