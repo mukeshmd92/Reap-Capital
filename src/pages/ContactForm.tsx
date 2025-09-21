@@ -96,7 +96,7 @@ const ContactForm = () => {
           type="text"
           required
           value={formData.name}
-          onChange={(e) => handleInputChange("name1", e.target.value)}
+          onChange={(e) => handleInputChange("name", e.target.value)}
           className="flex-1  w-5 bg-[#f0f0f0] rounded-lg px-3 py-2.5 placeholder:font-semibold placeholder:text-[#9c9c9c]"
           placeholder="Name as per PAN Card"
         />
@@ -104,7 +104,12 @@ const ContactForm = () => {
           type="tel"
           required
           value={formData.phone}
-          onChange={(e) => handleInputChange("phone", e.target.value)}
+          onChange={(e) => {
+            if (e.target.value.length > 10) {
+              e.target.value = e.target.value.slice(0, 10);
+            }
+            handleInputChange("phone", e.target.value.replace(/[^0-9]/g, ""));
+          }}
           className="flex-1 bg-[#f0f0f0]  rounded-lg px-3 py-2.5 placeholder:font-semibold placeholder:text-[#9c9c9c]"
           placeholder="Mobile Number"
           maxLength={10}
