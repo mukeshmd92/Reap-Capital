@@ -8,7 +8,6 @@ import {
   type ReactNode,
 } from "react";
 import { cn } from "../../lib/utils";
-import { div } from "motion/react-client";
 
 export interface TextRevealProps extends ComponentPropsWithoutRef<"div"> {
   children: string;

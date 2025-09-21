@@ -16,6 +16,8 @@ import business from "./business.png";
 import connected from "./connected.png";
 import employee from "./employee.png";
 
+import quantumLeap from "./quantumLeap.png";
+
 export {
   logo,
   LeftRocket,
@@ -33,4 +35,5 @@ export {
   business,
   connected,
   employee,
+  quantumLeap,
 };
