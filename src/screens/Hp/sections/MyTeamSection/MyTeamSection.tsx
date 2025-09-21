@@ -1,5 +1,4 @@
 import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
-import { Badge } from "../../../../components/ui/badge";
 import { Card, CardContent } from "../../../../components/ui/card";
 
 const MyTeamSection = ({ id }: { id: string }) => {
