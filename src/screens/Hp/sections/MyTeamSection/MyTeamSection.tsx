@@ -2,7 +2,7 @@ import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
 import { Badge } from "../../../../components/ui/badge";
 import { Card, CardContent } from "../../../../components/ui/card";
 
-const MyTeamSection = () => {
+const MyTeamSection = ({ id }: { id: string }) => {
   const teamMembers = [
     {
       name: "Rajiv Talreja",
@@ -27,7 +27,7 @@ const MyTeamSection = () => {
     },
   ];
   return (
-    <section className="w-full self-center relative px-4 pb-[7rem]">
+    <section className="w-full self-center relative px-4 pb-[7rem]" id={id}>
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">

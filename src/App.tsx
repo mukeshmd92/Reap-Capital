@@ -1,11 +1,11 @@
 import Navbar from "./components/Navbar/Navbar";
-import { Hp } from "./screens/Hp/Hp";
+import { AppRoutes } from "./routes";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Hp />
+      <AppRoutes />
     </div>
   );
 };

@@ -17,7 +17,7 @@ export const Hp = () => {
         {/* Hero Section with Background Images */}
         <HeroSection />
 
-        <AboutUsSection />
+        <AboutUsSection id="about" />
         {/* Stats Cards Section */}
         <StatsCardSection />
 
@@ -25,7 +25,7 @@ export const Hp = () => {
 
         <WhyUsSection />
 
-        <MyTeamSection />
+        <MyTeamSection id="team" />
 
         {/* Security Support Section */}
         <SecuritySupportSection />

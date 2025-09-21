@@ -1,9 +1,9 @@
 import { ICONS } from "../../../../assets";
 import { TextReveal } from "../../../../components/ui/text-reveal";
 
-export const AboutUsSection = () => {
+export const AboutUsSection = ({ id }: { id: string }) => {
   return (
-    <section className="relative w-full h-auto py-16">
+    <section className="relative w-full h-auto py-16" id={id}>
       <div className="relative max-w-4xl mx-auto px-4">
         {/* <img
           className="absolute inset-0 w-full h-full object-cover opacity-20"
