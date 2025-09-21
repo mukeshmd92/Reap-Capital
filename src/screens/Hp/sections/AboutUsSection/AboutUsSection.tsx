@@ -43,7 +43,7 @@ export const AboutUsSection = ({ id }: { id: string }) => {
                 Quantum Leap.
               </h1>
             </div>
-            <p className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto mt-4 pb-14">
+            <p className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto mt-4 pb-1">
               <TextReveal className="-mt-10 flex items-center justify-center text-center ">
                 We help business owners access money quickly. Whether it&apos;s
                 to grow, manage cash flow, or grab new opportunities, we&apos;re
