@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { ICONS } from "../../../../assets";
 import SectionDivider from "../../../../components/SectionDivider/SectionDivider";
 import HeaderBrick from "../../../../components/HeaderBrick/HeaderBrick";
+import { motion } from "framer-motion";
 
 export const SecuritySupportSection = () => {
   const SecurityCardsData = [
@@ -19,10 +20,15 @@ export const SecuritySupportSection = () => {
     },
   ];
   return (
-    <section className="max-w-[87rem] mx-auto py-14 px-22 ">
-      <div className="">
+    <section className="max-w-[87rem] mx-auto py-8 px-22 ">
+      <div  >
         {/* Header Section */}
-        <div className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
+        <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center mb-16">
           <HeaderBrick text="Security" />
 
           <h2 className=" flex flex-col items-center text-center [font-family:'Poppins',Helvetica] font-medium text-5xl tracking-[-1.44px] leading-[68px]">
@@ -46,7 +52,7 @@ export const SecuritySupportSection = () => {
             We never ask for additional fees to speed up processing or reduce
             interest rates. What you see is what you get.
           </div>
-        </div>
+        </motion.div>
 
         {/* Cars Section  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center">
