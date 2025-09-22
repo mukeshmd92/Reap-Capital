@@ -36,10 +36,7 @@ export const Hp = () => {
         <CheckEligibilitySection />
 
         {/* Footer Section */}
-        {/* <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:3000ms]"> */}
-        <section className="">
-          <FooterSection />
-        </section>
+        <FooterSection />
       </div>
     </div>
   );
