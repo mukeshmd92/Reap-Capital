@@ -20,7 +20,7 @@ export const FooterSection = () => {
           </div>
 
           {/* Company name */}
-          <h2 className="text-white text-6xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-7xl font-light tracking-tight">
+          <h2 className="text-white text-5xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-7xl font-light tracking-tight">
             Reap Capital
           </h2>
         </div>
