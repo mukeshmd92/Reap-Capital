@@ -82,7 +82,7 @@ const FaqSection = () => {
       </motion.div>
 
       <div className="py-8 sm:py-12 lg:py-16 px-1 sm:px-3 lg:px-5 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[75rem] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-8">
             {/* Left Column */}
             <div>
