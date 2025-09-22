@@ -8,7 +8,7 @@ import path from "path";
 // })
 export default defineConfig(() => ({
   plugins: [react(), tailwindcss()],
-  publicDir: "./static",
+  publicDir: "public",
   base: "./",
   resolve: {
     alias: {
