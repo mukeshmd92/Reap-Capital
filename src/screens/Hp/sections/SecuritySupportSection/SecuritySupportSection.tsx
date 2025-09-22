@@ -20,18 +20,19 @@ export const SecuritySupportSection = () => {
     },
   ];
   return (
-    <section className="max-w-[87rem] mx-auto py-8 px-22 ">
-      <div  >
+    <section className="max-w-[87rem] mx-auto py-4 sm:py-6 lg:py-8 px-4 sm:px-8 lg:px-22">
+      <div>
         {/* Header Section */}
         <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="flex flex-col items-center mb-16">
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center mb-8 sm:mb-12 lg:mb-16"
+        >
           <HeaderBrick text="Security" />
 
-          <h2 className=" flex flex-col items-center text-center [font-family:'Poppins',Helvetica] font-medium text-5xl tracking-[-1.44px] leading-[68px]">
+          <h2 className="flex flex-col items-center text-center [font-family:'Poppins',Helvetica] font-medium text-3xl sm:text-4xl lg:text-5xl tracking-[-1.44px] leading-[1.2] sm:leading-[1.3] lg:leading-[68px]">
             <span className="text-black tracking-[-0.69px]">
               Security & Support
             </span>
@@ -41,34 +42,44 @@ export const SecuritySupportSection = () => {
           </h2>
           <div className="flex items-center gap-2 mt-2">
             <div className="flex items-center justify-center p-1.5 rounded-full bg-green-600">
-              <Check className="w-5 h-5" color="white" strokeWidth={4} />
+              <Check
+                className="w-4 h-4 sm:w-5 sm:h-5"
+                color="white"
+                strokeWidth={4}
+              />
             </div>
-            <p className="text-green-600 font-medium text-2xl">
+            <p className="text-green-600 font-medium text-lg sm:text-xl lg:text-2xl">
               No Unofficial Charges
             </p>
           </div>
 
-          <div className="max-w-[32rem] mx-auto text-center mt-4 text-gray-700 text-[1.125rem]">
+          <div className="max-w-[32rem] mx-auto text-center mt-4 text-gray-700 text-sm sm:text-base lg:text-[1.125rem] px-4">
             We never ask for additional fees to speed up processing or reduce
             interest rates. What you see is what you get.
           </div>
         </motion.div>
 
-        {/* Cars Section  */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-items-center">
+        {/* Cards Section  */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-8 lg:gap-10 justify-items-center">
           {SecurityCardsData.map((card, index) => (
             <div
               key={index}
-              className=" max-w-xl p-1.5 border border-gray-300 bg-gray-100 shadow-xl rounded-3xl rounded-tl-[3.5rem] overflow-hidden relative "
+              className="w-full max-w-sm sm:max-w-md lg:max-w-xl p-1.5 border border-gray-300 bg-gray-100 shadow-xl rounded-3xl rounded-tl-[3.5rem] overflow-hidden relative"
             >
               <div className="absolute inset-0 overflow-hidden rounded-3xl rounded-tl-[3.5rem]">
-                <div className="absolute top-[5%] left-[20%] w-[60%] h-[90%] bg-green-600 blur-2xl rounded-full"></div>
+                <div className="absolute top-[5%] left-[10%] w-[80%] h-[95%] bg-green-600 blur-2xl rounded-full"></div>
               </div>
-              <div className=" flex flex-row items-center gap-5 p-5 bg-white/80 rounded-2xl rounded-tl-[3.5rem] shadow-xl relative z-10">
-                <img src={card.icon} alt={card.title} className="w-20 h-20" />
-                <div>
-                  <p className="text-xl font-semibold">{card.title}</p>
-                  <p className="text-gray-700 mt-3 text-medium w-[90%]">
+              <div className="flex flex-col sm:flex-row items-start sm:items-start gap-3 sm:gap-5 p-5 py-8 sm:p-6 bg-white/80 rounded-2xl rounded-tl-[3.5rem] shadow-xl relative z-10">
+                <img
+                  src={card.icon}
+                  alt={card.title}
+                  className="w-28 h-auto sm:w-20 sm:h-auto flex-shrink-0"
+                />
+                <div className="text-left">
+                  <p className="text-xl sm:text-xl font-semibold">
+                    {card.title}
+                  </p>
+                  <p className="text-gray-700 mt-2 sm:mt-3 text-base sm:text-base w-full">
                     {card.description}
                   </p>
                 </div>
