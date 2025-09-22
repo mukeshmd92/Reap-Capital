@@ -15,7 +15,7 @@ export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
       id={id}
-      className="overflow-hidden h-[50rem] w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
+      className="overflow-hidden h-[53rem]  md:h-[43rem] w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
       style={{ backgroundImage: `url(${bg})` }}
       initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
       animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
@@ -72,7 +72,7 @@ export const HeroSection = ({ id }: { id: string }) => {
 
         <div className="relative w-[360px] h-[400px] top-[-80px] md:top-[0]  flex items-center justify-center">
           <img
-            className=" z-10 md:mr-26 w-[260px]  h-[300px] sm:w-[300px] sm:h-[300px]  md:w-[329px] md:h-[363px]   "
+            className=" z-10 mr-8 md:mr-26 w-[260px]  h-[300px] sm:w-[300px] sm:h-[300px]  md:w-[329px] md:h-[363px]   "
             src={humanarrow}
             alt=""
           />
