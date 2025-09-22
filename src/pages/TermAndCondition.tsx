@@ -1,4 +1,5 @@
 import bg from "../assets/icons/bg.png";
+import backgroundimgs from "../assets/icons/backgroundimgs.png";
 import Rocket from "../assets/images/Rocket.png";
 import bluringimg from "../assets/images/bluringimg.svg";
 import { motion } from "framer-motion";
@@ -15,69 +16,68 @@ const TermAndCondition = () => {
   return (
     <div>
       <motion.div
-        className="relative overflow-hidden px-38 rounded-b-4xl"
+        className="relative overflow-hidden px-4 py-14 sm:py-0 sm:px-8 md:px-16 lg:px-38 rounded-b-4xl"
         style={{ backgroundImage: `url(${bg})` }}
         initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
         animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <div className="py-31   ">
-          <p className="text-7xl font-medium text-white mt-13">
-            {" "}
+        <div className="py-8 sm:py-16 md:py-24 lg:py-31">
+          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mt-4 sm:mt-8 md:mt-13">
             Terms and Condition
           </p>
         </div>
         <motion.div
-          className="absolute top-[-40px] md:ml-15 rounded-b-full w-200 md:w-370 pr-34 py-10"
+          className="absolute top-[-20px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-15 rounded-b-full w-32 sm:w-40 md:w-200 lg:w-370 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10"
           initial={{ y: -200, opacity: 0 }} // starts above screen
           animate={{ y: 0, opacity: 1 }} // slides down to normal position
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <img src={toparrow} alt="" />
+          <img src={toparrow} alt="" className="w-full h-auto" />
         </motion.div>
 
-        <div className="absolute right-[160px] md:right-[704px] mt-[-110px] md:mt-[-205px]">
+        <div className="absolute right-4 sm:right-8 md:right-[160px] lg:right-[704px] mt-[-60px] sm:mt-[-80px] md:mt-[-110px] lg:mt-[-205px]">
           <motion.img
             src={Downmoney}
-            className="w-43 h-50 md:w-90 md:h-98 rotate-120deg] shrink-0 aspect-[201.17/301.89]"
+            className="w-8 h-10 sm:w-12 sm:h-14 md:w-43 md:h-50 lg:w-90 lg:h-98 rotate-[120deg] shrink-0 aspect-[201.17/301.89]"
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.1 }}
           />
         </div>
 
-        <div className="absolute ml-75 mt-185 md:ml-182 md:mt-[-170px]">
+        <div className="absolute left-4 sm:left-8 md:ml-75 lg:ml-182 mt-20 sm:mt-32 md:mt-185 lg:mt-[-170px]">
           <motion.img
-            className=" w-30 h-40 md:w-80 md:h-78 rotate-[20.deg] shrink-0 aspect-[201.17/301.89]"
+            className="w-6 h-8 sm:w-8 sm:h-10 md:w-30 md:h-40 lg:w-80 lg:h-78 rotate-[20deg] shrink-0 aspect-[201.17/301.89]"
             src={down2}
             initial={{ y: 200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           />
         </div>
-        <div className="  absolute mt-137 mr-[-390px]   md:mt-[-240px] md:ml-[1140px]">
+        <div className="absolute right-4 sm:right-8 md:right-[-390px] lg:ml-[1140px] mt-20 sm:mt-32 md:mt-137 lg:mt-[-240px]">
           <motion.img
             src={sidearrow}
-            className="mix-blend-color-dodge h-30 md:h-50 md:w-53"
+            className="mix-blend-color-dodge h-6 w-6 sm:h-8 sm:w-8 md:h-30 md:w-30 lg:h-50 lg:w-53"
             initial={{ rotate: 90, x: 200, opacity: 0 }}
             animate={{ rotate: 290, x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           />
         </div>
-        <div className=" absolute mt-137 mr-[-390px]   md:mt-[-280px] md:ml-[-120px]">
+        <div className="absolute right-4 sm:right-8 md:right-[-390px] lg:ml-[-120px] mt-20 sm:mt-32 md:mt-137 lg:mt-[-280px]">
           <motion.img
             src={bluringimg}
-            className="mix-blend-color-dodge w-29 md:w-38"
+            className="mix-blend-color-dodge w-6 h-6 sm:w-8 sm:h-8 md:w-29 md:h-29 lg:w-38 lg:h-38"
             initial={{ y: -200, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
           />
         </div>
 
-        <div className=" absolute mt-137 mr-[-390px]   md:mt-[-190px] md:ml-[-200px]">
+        <div className="absolute right-4 sm:right-8 md:right-[-390px] lg:ml-[-200px] mt-20 sm:mt-32 md:mt-137 lg:mt-[-190px]">
           <motion.img
             src={Rocket}
-            className="h-46 md:h-61"
+            className="h-8 w-8 sm:h-12 sm:w-12 md:h-46 md:w-46 lg:h-61 lg:w-61"
             initial={{ x: -300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
@@ -85,32 +85,34 @@ const TermAndCondition = () => {
         </div>
       </motion.div>
       <div>
-        <div className="px-50">
-          <h2 className="text-2xl font-bold my-8">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-50">
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold my-4 sm:my-6 md:my-8 leading-tight">
             COMPREHENSIVE TERMS OF USE, PRIVACY POLICY & DATA PROTECTION POLICY
           </h2>
 
-          <ol className="list-decimal list-inside space-y-4">
+          <ol className="list-decimal list-inside space-y-3 sm:space-y-4">
             <li>
-              <h3 className="text-xl font-semibold mb-2">INTRODUCTION</h3>
-              <ol className="list-decimal list-inside space-y-2">
-                <li>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
+                INTRODUCTION
+              </h3>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <li className="text-sm sm:text-base leading-relaxed">
                   This Unified Policy sets forth the Terms of Use, Privacy
                   Commitments, and Data Protection Protocols governing the
-                  access to and use of the services (“Policy”) provided by Reap
-                  Capital (“We”, “Us”, or “Our” “Company” or “REAP Capital”), a
+                  access to and use of the services ("Policy") provided by Reap
+                  Capital ("We", "Us", or "Our" "Company" or "REAP Capital"), a
                   fintech referral platform facilitating the connection between
                   prospective borrowers and RBI-registered financial
                   institutions and lenders.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   By accessing, registering on, or otherwise using any part of
-                  the services or platform operated by Reap Capital, you (“You”,
-                  “Your”, “User” or “Client”) acknowledge that You have read,
+                  the services or platform operated by Reap Capital, you ("You",
+                  "Your", "User" or "Client") acknowledge that You have read,
                   understood, and agreed to be bound by the terms of this
                   Unified Policy in its entirety.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   This Policy shall apply to all users of the platform,
                   including but not limited to individuals seeking financial
                   products or services, and shall govern the manner in which
@@ -122,21 +124,23 @@ const TermAndCondition = () => {
             </li>
 
             <li>
-              <h3 className="text-xl font-semibold mb-2">DEFINITIONS:</h3>
-              <ol className="list-decimal list-inside space-y-2">
-                <li>
-                  The terms “User,” “Client,” “Your” or “You” (including any
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
+                DEFINITIONS:
+              </h3>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <li className="text-sm sm:text-base leading-relaxed">
+                  The terms "User," "Client," "Your" or "You" (including any
                   grammatical variations thereof) shall mean and refer to any
                   natural or legal person who accesses, browses, or uses the
                   Website and/or Mobile Application and/or avails any of the
                   services provided by the Company.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   The Reap Capital shall mean and refer to, including its parent
                   company, subsidiaries, affiliates, successors, and assigns.
                 </li>
-                <li>
-                  The terms “Site” or “Website” shall refer to https://________
+                <li className="text-sm sm:text-base leading-relaxed">
+                  The terms "Site" or "Website" shall refer to https://________
                   and any other websites, platforms, portals, or digital
                   interfaces owned, operated, managed, or otherwise controlled
                   by the Company, and shall include all content, software,
@@ -144,8 +148,8 @@ const TermAndCondition = () => {
                   and other components made available on or through such
                   platforms.
                 </li>
-                <li>
-                  The terms “Content,” “Technology,” and “Material” shall mean
+                <li className="text-sm sm:text-base leading-relaxed">
+                  The terms "Content," "Technology," and "Material" shall mean
                   and include, without limitation, all software, source code,
                   object code, databases, information, text, data, images, user
                   interfaces, visual interfaces, trademarks, logos, music, sound
@@ -154,8 +158,8 @@ const TermAndCondition = () => {
                   as displayed, used, or provided on the Website and/or Mobile
                   Application.
                 </li>
-                <li>
-                  The terms “Product” or “Services” shall mean and refer to the
+                <li className="text-sm sm:text-base leading-relaxed">
+                  The terms "Product" or "Services" shall mean and refer to the
                   facilitation of access to information and/or referral services
                   with respect to financial products and services, including but
                   not limited to various types of loans such as home loans,
@@ -180,10 +184,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 ELIGIBILITY AND USE OF THE PLATFORM
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   By accessing and registering on the Website and/or Mobile
                   Application operated by Reap Capital, you represent and
@@ -234,10 +238,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 USER REPRESENTATIONS AND RESPONSIBILITIES
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   The User hereby represents, warrants, and agrees that he/she
                   shall be solely and exclusively responsible for maintaining
@@ -369,18 +373,20 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 TERMS AND CONDITIONS
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
-                <h4>7.1 Nature of Services</h4>
-                <li>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+                  7.1 Nature of Services
+                </h4>
+                <li className="text-sm sm:text-base leading-relaxed">
                   Referral and Intermediary Function: Reap Capital operates
                   solely in the capacity of a Referral Agent (RA) or Direct
                   Selling Agent (DSA), and does not, at any point, function as a
                   lender or financial institution.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   No Lending Activity or Credit Decisioning: Reap Capital does
                   not, either directly or indirectly, participate in the lending
                   process or make any credit or loan sanction decisions. The
@@ -388,7 +394,7 @@ const TermAndCondition = () => {
                   rejecting, or determining the terms of any financial products
                   or services.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   Lender Responsibility: All aspects pertaining to loan
                   eligibility assessment, document verification, sanctioning,
                   and disbursal of loan amounts are undertaken independently and
@@ -398,9 +404,11 @@ const TermAndCondition = () => {
                 </li>
               </ol>
 
-              <ol className="list-decimal list-inside space-y-2">
-                <h4>7.2 CUSTOMER CONSENT & AUTHORIZATION</h4>
-                <li>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+                  7.2 CUSTOMER CONSENT & AUTHORIZATION
+                </h4>
+                <li className="text-sm sm:text-base leading-relaxed">
                   Consent for Data Processing and Sharing: By voluntarily
                   submitting any information, data, or documentation on the Reap
                   Capital platform, you expressly authorize and provide your
@@ -412,7 +420,7 @@ const TermAndCondition = () => {
                   activities, in accordance with applicable data protection laws
                   and regulatory guidelines.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   Accuracy of Information: You represent and warrant that all
                   personal, financial, and other information submitted by you
                   through the platform is true, complete, accurate, and current
@@ -423,8 +431,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <ol className="list-decimal list-inside space-y-2">
-                <h4>7.3 NO GUARANTEE</h4>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+                  7.3 NO GUARANTEE
+                </h4>
                 <li>
                   No Guarantee of Approval: The submission of a loan application
                   or any associated documentation through the Reap Capital
@@ -446,8 +456,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <ol className="list-decimal list-inside space-y-2">
-                <h4>7.4 SERVICE USE OBLIGATIONS</h4>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+                  7.4 SERVICE USE OBLIGATIONS
+                </h4>
                 <li>
                   Right to Amend: Reap Capital reserves the unfettered right to
                   amend, modify, update, or revise this Unified Policy,
@@ -468,8 +480,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <ol className="list-decimal list-inside space-y-2">
-                <h4>7.6 GOVERNING LAW AND JURISDICTION</h4>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
+                <h4 className="text-sm sm:text-base md:text-lg font-semibold mb-2">
+                  7.6 GOVERNING LAW AND JURISDICTION
+                </h4>
                 <li>
                   This Policy shall be governed by and construed in accordance
                   with the laws of India, and the rights and obligations of the
@@ -500,10 +514,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 AUTOMATED ACCESS AND ACTIVITY
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   Reap Capital may implement robot exclusion protocols, such as
                   robots.txt files or HTML meta tags, to control and restrict
@@ -523,10 +537,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 THIRD-PARTY LINKS AND ADVERTISEMENTS
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   The Website and/or Mobile Application may contain links to
                   external websites, platforms, or resources maintained by third
@@ -559,8 +573,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">PRIVACY POLICY</h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
+                PRIVACY POLICY
+              </h3>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   Data Collection-: Reap Capital, in the course of providing its
                   Services, may collect and process various categories of data
@@ -788,10 +804,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 DATA PROTECTION POLICY
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   REGULATORY COMPLIANCE
                   <h4>Our policies comply with:</h4>
@@ -878,7 +894,7 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 CONSENT MECHANISM & OPT-OUT: -{" "}
               </h3>
               <h4>
@@ -907,10 +923,10 @@ const TermAndCondition = () => {
               </ul>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 WARRANTY, LIMITATION OF LIABILITY, AND INDEMNIFICATION
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   The content, documentation, graphics, software, products, and
                   services available on this Website and/or Mobile Application
@@ -948,8 +964,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">INDEMNITY</h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
+                INDEMNITY
+              </h3>
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   You hereby agree to indemnify, defend, and hold harmless the
                   Company, including its affiliates, officers, directors,
@@ -974,10 +992,10 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
                 REASONABLE SECURITY PRACTICES AND PROCEDURES
               </h3>
-              <ol className="list-decimal list-inside space-y-2">
+              <ol className="list-decimal list-inside space-y-1 sm:space-y-2">
                 <li>
                   Reap Capital has implemented and shall maintain reasonable
                   security practices and procedures to protect the personal,
@@ -1004,16 +1022,18 @@ const TermAndCondition = () => {
               </ol>
             </li>
             <li>
-              <h3 className="text-xl font-semibold mb-2">MISCELLANEOUS</h3>
-              <ul>
-                <li>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2">
+                MISCELLANEOUS
+              </h3>
+              <ul className="space-y-1 sm:space-y-2">
+                <li className="text-sm sm:text-base leading-relaxed">
                   Policy Updates: Reap Capital reserves the right to amend,
                   update, or modify this Policy at its sole discretion. All such
                   changes shall be duly published on the official website, and
                   continued use of the platform following such publication shall
                   constitute deemed acceptance of the revised terms.
                 </li>
-                <li>
+                <li className="text-sm sm:text-base leading-relaxed">
                   Third-Party Links: The Reap Capital platform may contain links
                   to third-party websites or services. Users are advised that
                   Reap Capital does not control or endorse the content,
@@ -1023,8 +1043,8 @@ const TermAndCondition = () => {
                   those third-party websites before disclosing any personal
                   information.
                 </li>
-                <li>
-                  Children’s Data: The services and platform offered by Reap
+                <li className="text-sm sm:text-base leading-relaxed">
+                  Children's Data: The services and platform offered by Reap
                   Capital are strictly intended for use by individuals who are
                   18 years of age or older. Reap Capital does not knowingly
                   collect or process personal data from individuals below the
