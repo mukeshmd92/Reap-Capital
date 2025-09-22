@@ -43,7 +43,7 @@ const LoansSection = () => {
         viewport={{ once: true }}
       >
         <HeaderBrick text="Loans" />
-        <h2 className="flex flex-col items-center text-5xl font-medium text-center tracking-[-1.44px] leading-[58px] [font-family:'Poppins',Helvetica] max-w-xl">
+        <h2 className="flex flex-col items-center justify-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] md:leading-[58px] [font-family:'Poppins',Helvetica] max-w-xl">
           <span className="text-black tracking-[-0.69px]">
             Business Loans Made
           </span>
@@ -51,7 +51,7 @@ const LoansSection = () => {
             <span className="text-black">for</span> Real Business Needs
           </span>
         </h2>
-        <p className="[font-family:'Inter_Variable-Regular',Helvetica] font-normal text-neutral-700 text-lg text-center leading-[26px] max-w-[32rem] mt-4">
+        <p className="[font-family:'Inter_Variable-Regular',Helvetica] flex items-center justify-center font-normal text-neutral-700 text-lg text-center  leading-[26px] max-w-[32rem] mt-4">
           Choose the right financing solution to manage cash flow, expand
           operations, or unlock working capital without any delays or confusion.
         </p>
@@ -68,10 +68,10 @@ const LoansSection = () => {
             viewport={{ once: true }}
           >
             <Card className="bg-white rounded-[60px_20px_20px_20px] border border-[#c2c2c2] p-0 overflow-hidden">
-              <CardContent className="p-0 h-[263px] relative">
-                <div className="flex items-start gap-4 p-2 h-full overflow-visible">
+              <CardContent className="p-0 md:h-[263px] relative">
+                <div className="flex flex-col  md:flex-row items-center md:items-start gap-4 p-2 h-full overflow-visible">
                   {/* Icon Section */}
-                  <div className="relative w-[124px] h-[124px] mt-[52px] flex-shrink-0">
+                  <div className="relative   w-[200px] h-[200px] mt-[22px] flex-shrink-0">
                     <img
                       className="w-full h-full"
                       alt="Feature icon"
@@ -81,7 +81,7 @@ const LoansSection = () => {
 
                   {/* Content Section */}
                   <div className="flex-1 h-full overflow-visible">
-                    <div className="bg-white flex flex-col justify-between rounded-[10px_14px_14px_10px] p-5 h-full shadow-[0px_13px_28px_#0000001a,0px_11px_51px_#00000017,0px_115px_69px_#0000000d,0px_205px_82px_#00000003,0px_320px_90px_transparent] relative">
+                    <div className="bg-white flex flex-col rounded-[10px_14px_14px_10px] p-5 h-full shadow-[0px_13px_28px_#0000001a,0px_11px_51px_#00000017,0px_115px_69px_#0000000d,0px_205px_82px_#00000003,0px_320px_90px_transparent] relative">
                       {/* Title and Description */}
                       <div className="mb-6">
                         <h3 className="font-semibold text-black text-2xl mb-[21px]">
