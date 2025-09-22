@@ -32,7 +32,7 @@ export const SecuritySupportSection = () => {
         >
           <HeaderBrick text="Security" />
 
-          <h2 className="flex flex-col items-center text-center [font-family:'Poppins',Helvetica] font-medium text-3xl sm:text-4xl lg:text-5xl tracking-[-1.44px] leading-[1.2] sm:leading-[1.3] lg:leading-[68px]">
+          <h2 className="flex flex-col items-center text-center mt-4 sm:mt-0 [font-family:'Poppins',Helvetica] font-medium text-3xl sm:text-4xl lg:text-5xl tracking-[-1.44px] leading-[1.2] sm:leading-[1.3] lg:leading-[68px]">
             <span className="text-black tracking-[-0.69px]">
               Security & Support
             </span>
@@ -48,12 +48,12 @@ export const SecuritySupportSection = () => {
                 strokeWidth={4}
               />
             </div>
-            <p className="text-green-600 font-medium text-lg sm:text-xl lg:text-2xl">
+            <p className="text-green-600 font-medium text-2xl sm:text-2xl lg:text-2xl">
               No Unofficial Charges
             </p>
           </div>
 
-          <div className="max-w-[32rem] mx-auto text-center mt-4 text-gray-700 text-sm sm:text-base lg:text-[1.125rem] px-4">
+          <div className="max-w-[23rem] sm:max-w-[32rem] mx-auto text-center mt-4 text-gray-700 text-base sm:text-base lg:text-[1.125rem] px-4">
             We never ask for additional fees to speed up processing or reduce
             interest rates. What you see is what you get.
           </div>
