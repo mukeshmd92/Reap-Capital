@@ -99,7 +99,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-transparent z-50">
-      <div className=" max-w-[87rem] mx-auto  flex flex-row justify-between  items-center py-6 lg:py-5 lg:4 lg:px-24  md:px-20 px-7 ">
+      <div className="max-w-[87rem] mx-auto flex flex-row justify-between items-center py-2 md:py-6 lg:py-5 lg:4 lg:px-24 md:px-20 px-7 backdrop-blur-xs sm:backdrop-blur-none">
         <div>
           <Link to="/">
             <img
@@ -178,69 +178,73 @@ const Navbar = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             <span
-              className={`w-6 h-0.5   bg-white rounded transition-all duration-300 ${
+              className={`w-6 h-0.5 rounded transition-all duration-300 ${
                 isOpen ? "rotate-45 translate-y-1.5" : ""
-              }`}
+              } ${isContactPage || isHeroVisible ? "bg-white" : "bg-black"}`}
             ></span>
             <span
-              className={`w-6 h-0.5   bg-white rounded transition-all mt-1 duration-300 ${
+              className={`w-6 h-0.5 rounded transition-all mt-1 duration-300 ${
                 isOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
+              } ${isContactPage || isHeroVisible ? "bg-white" : "bg-black"}`}
             ></span>
           </button>
         </div>
-        {isOpen && (
-          <div className="md:hidden absolute top-23  w-89 sm:w-2xl bg-amber-50 border-sm grey-200 rounded-xl shadow  ">
-            <ul
-              className="flex flex-col items-center gap-5 py-6 
-                  px-5 font-medium text-gray-800   "
+        <div
+          className={`md:hidden absolute top-23 w-89 sm:w-2xl bg-white backdrop-blur-md border border-gray-200 rounded-xl shadow-lg transition-all duration-300 ease-in-out transform ${
+            isOpen
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
+          }`}
+        >
+          <ul className="flex flex-col items-center gap-5 py-6 px-5 font-medium text-gray-800">
+            <li
+              className={`py-2 px-4 rounded-lg transition-all duration-200 ${
+                isHomePage && visibleSection === "about"
+                  ? "border-1 border-green-500 shadow-lg"
+                  : "border-1 border-transparent"
+              } ${isOpen ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: isOpen ? "0.1s" : "0s" }}
             >
-              <li
-                className={`py-2 px-4 rounded-lg transition-all duration-200 ${
-                  isHomePage && visibleSection === "about"
-                    ? "border-1 border-green-500 shadow-lg"
-                    : "border-1 border-transparent"
-                }`}
+              <button
+                onClick={navigateToAbout}
+                className="hover:text-green-600 cursor-pointer text-md"
               >
-                <button
-                  onClick={navigateToAbout}
-                  className="hover:text-green-600 cursor-pointer text-md"
-                >
-                  About
-                </button>
-              </li>
-              <li
-                className={`py-2 px-4 rounded-lg transition-all duration-200 ${
-                  isHomePage && visibleSection === "team"
-                    ? "border-1 border-green-500 shadow-lg"
-                    : "border-1 border-transparent"
-                }`}
+                About
+              </button>
+            </li>
+            <li
+              className={`py-2 px-4 rounded-lg transition-all duration-200 ${
+                isHomePage && visibleSection === "team"
+                  ? "border-1 border-green-500 shadow-lg"
+                  : "border-1 border-transparent"
+              } ${isOpen ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: isOpen ? "0.2s" : "0s" }}
+            >
+              <button
+                onClick={navigateToTeam}
+                className="hover:text-green-600 cursor-pointer text-md"
               >
-                <button
-                  onClick={navigateToTeam}
-                  className="hover:text-green-600 cursor-pointer text-md"
-                >
-                  Team
-                </button>
-              </li>
-              <li
-                className={`py-2 px-4 rounded-lg transition-all duration-200 ${
-                  isContactPage
-                    ? "border-1 border-green-500 shadow-lg"
-                    : "border-1 border-transparent"
-                }`}
+                Team
+              </button>
+            </li>
+            <li
+              className={`py-2 px-4 rounded-lg transition-all duration-200 ${
+                isContactPage
+                  ? "border-1 border-green-500 shadow-lg"
+                  : "border-1 border-transparent"
+              } ${isOpen ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: isOpen ? "0.3s" : "0s" }}
+            >
+              <Link
+                onClick={() => setIsOpen(false)}
+                className="hover:text-green-600 text-md"
+                to="/contact"
               >
-                <Link
-                  onClick={() => setIsOpen(false)}
-                  className="hover:text-green-600 text-md"
-                  to="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
