@@ -1,6 +1,6 @@
 import { ICONS } from "../../../../assets";
 import { Card, CardContent } from "../../../../components/ui/card";
-import { motion } from "framer-motion"; // 👈 import Framer Motion
+import { motion } from "framer-motion";
 
 const StatsCardSection = () => {
   const statsCards = [
