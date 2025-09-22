@@ -15,7 +15,7 @@ export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
       id={id}
-      className="overflow-hidden h-[50rem] w-full h-[680px] relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
+      className="overflow-hidden h-[50rem] w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl"
       style={{ backgroundImage: `url(${bg})` }}
       initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
       animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in

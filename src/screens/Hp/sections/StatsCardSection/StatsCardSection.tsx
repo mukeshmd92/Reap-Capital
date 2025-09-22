@@ -32,8 +32,8 @@ const StatsCardSection = () => {
 
   return (
     <section className="w-full px-4 py-8">
-      <div className="max-w-[87rem] px-28 mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 justify-items-center">
+      <div className="max-w-[87rem] px-24 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
           {statsCards.map((stat, index) => (
             <motion.div
               key={index}
@@ -42,7 +42,7 @@ const StatsCardSection = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }} // staggered animation
               viewport={{ once: true }} // animate only once
             >
-              <Card className="w-[15rem] h-[244px] bg-white rounded-[60px_20px_20px_20px] border border-solid border-[#c2c2c2]">
+              <Card className="w-[17rem] h-[244px] bg-white rounded-[60px_20px_20px_20px] border border-solid border-[#c2c2c2]">
                 <CardContent className="p-0">
                   <div className="relative h-[230px] m-[7px] rounded-[55px_14px_14px_10px] bg-white overflow-hidden shadow-[0px_13px_28px_#0000001a,0px_11px_51px_#00000017,0px_115px_69px_#0000000d,0px_205px_82px_#00000003,0px_320px_90px_transparent]">
                     <div className="absolute w-[178px] h-[71px] top-[139px] left-[18px]">
