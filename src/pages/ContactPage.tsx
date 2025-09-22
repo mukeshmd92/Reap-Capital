@@ -7,13 +7,13 @@ const ContactPage = () => {
   return (
     <div className="bg-black">
       <div
-        className="overflow-hidden h-screen w-full relative flex flex-row justify-center bg-cover bg-center rounded-b-4xl bg-black"
+        className="overflow-hidden pb-8 w-full relative flex justify-center bg-cover bg-center rounded-b-4xl bg-black"
         style={{ backgroundImage: `url(${ContactBg})` }}
       >
-        <div className=" w-[75rem] flex justify-between items-center  ">
-          <div className="flex flex-col gap-5 mt-[-50px] w-152  text-white items-start  ">
-            <div>
-              <h1 className="text-5xl font-medium ">
+        <div className=" w-[75rem] flex flex-col md:flex-row justify-between items-center pb-8 ">
+          <div className="flex flex-col gap-5 mt-43 md:mt-[-50px]  w-94 md:w-152   text-white items-center md:items-start  ">
+            <div >
+              <h1 className=" text-center md:text-start  text-3xl md:text-5xl   font-medium ">
                 <TextAnimate
                   animation="blurInUp"
                   by="character"
@@ -57,7 +57,7 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-          <div className="mt-33">
+          <div className="mt-8 sm:mt-20 lg:mt-33 px-5 md:px-0 pb-2 sm:pb-0 ">
             <ContactForm />
           </div>
         </div>
