@@ -71,7 +71,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-4 md:mb-6">
                       {teamMembers[0].name}
                     </h3>
-                    <p className="text-sm md:text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica] max-w-lg">
+                    <p className="text-base md:text-base text-neutral-500 leading-normal [font-family:'Poppins',Helvetica] max-w-lg">
                       {teamMembers[0].description}
                     </p>
                   </div>
@@ -93,7 +93,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                   <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-3 md:mb-4">
                     {teamMembers[1].name}
                   </h3>
-                  <p className="text-sm md:text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica]">
+                  <p className="text-base md:text-base text-neutral-500 leading-normal [font-family:'Poppins',Helvetica]">
                     {teamMembers[1].description}
                   </p>
                 </div>
@@ -114,7 +114,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                   <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-3 md:mb-4">
                     {teamMembers[2].name}
                   </h3>
-                  <p className="text-sm md:text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica]">
+                  <p className="text-base md:text-base text-neutral-500 leading-normal [font-family:'Poppins',Helvetica]">
                     {teamMembers[2].description}
                   </p>
                 </div>
