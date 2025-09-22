@@ -68,10 +68,10 @@ const LoansSection = () => {
             viewport={{ once: true }}
           >
             <Card className="bg-white rounded-[60px_20px_20px_20px] border border-[#c2c2c2] p-0 overflow-hidden">
-              <CardContent className="p-0 h-[263px] relative">
-                <div className="flex flex-col md:flex-row items-start gap-4 p-2 h-full overflow-visible">
+              <CardContent className="p-0 md:h-[263px] relative">
+                <div className="flex flex-col  md:flex-row items-center md:items-start gap-4 p-2 h-full overflow-visible">
                   {/* Icon Section */}
-                  <div className="relative w-[124px] h-[124px] mt-[52px] flex-shrink-0">
+                  <div className="relative   w-[200px] h-[200px] mt-[22px] flex-shrink-0">
                     <img
                       className="w-full h-full"
                       alt="Feature icon"

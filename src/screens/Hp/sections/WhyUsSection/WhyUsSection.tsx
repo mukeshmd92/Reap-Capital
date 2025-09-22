@@ -33,7 +33,7 @@ const WhyUsSection = () => {
       </motion.header>
 
       {/* row of 2 */}
-      <div className="flex gap-6 items-center max-w-[75rem] mx-auto mt-10">
+      <div className="flex flex-col md:flex-row gap-6 items-center  md:max-w-[75rem] mx-auto mt-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ const WhyUsSection = () => {
           <img
             src={IMAGES.WhyImgOne}
             alt="Why Us"
-            className="scale-110 object-cover"
+            className=" scale-110 object-cover"
           />
           <div className="p-6 bg-gradient-to-b from-green-100 to-white">
             <h4 className="text-gray-900 font-semibold mb-2 text-[1.75rem]">
@@ -81,7 +81,7 @@ const WhyUsSection = () => {
       </div>
 
       {/* row of 3 */}
-      <div className="flex gap-6 items-center max-w-[75rem] mx-auto mt-10">
+      <div className="flex  flex-col md:flex-row gap-6 items-center max-w-[75rem] mx-auto mt-10">
         {[
           {
             img: IMAGES.WhyImgThree,
