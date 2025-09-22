@@ -1,5 +1,5 @@
 import bg from "../assets/icons/bg.png";
-import backgroundimgs from "../assets/icons/backgroundimgs.png";
+// import backgroundimgs from "../assets/icons/backgroundimgs.png";
 import Rocket from "../assets/images/Rocket.png";
 import bluringimg from "../assets/images/bluringimg.svg";
 import { motion } from "framer-motion";
