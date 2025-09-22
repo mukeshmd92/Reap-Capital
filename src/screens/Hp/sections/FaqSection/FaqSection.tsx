@@ -59,30 +59,31 @@ const FaqSection = () => {
   const rightColumnItems = faqItems.slice(5);
 
   return (
-    <section className="w-full px-4 py-16 ">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       <motion.div
-                      initial={{ opacity: 0, y: 40 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8 }}
-                      viewport={{ once: true }}
-       className="max-w-2xl mx-auto text-center">
-        <Badge className="mb-4 p-[0.5rem] px-[1.5rem] bg-white rounded-tl-3xl text-lg border border-solid border-[#1caa7b]  text-[#109157] font-semibold">
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="max-w-2xl mx-auto text-center"
+      >
+        <Badge className="mb-4 p-[0.5rem] px-[1.5rem] bg-white rounded-tl-3xl text-sm sm:text-base lg:text-lg border border-solid border-[#1caa7b] text-[#109157] font-semibold">
           FAQs
         </Badge>
-        <h2 className="[font-family:'Poppins',Helvetica] font-medium text-5xl text-center tracking-[-1.44px] leading-[68px]">
-          <span className="text-black tracking-[-0.69px] font-medium ">
+        <h2 className="[font-family:'Poppins',Helvetica] font-medium text-3xl sm:text-4xl lg:text-5xl text-center tracking-[-0.5px] sm:tracking-[-1px] lg:tracking-[-1.44px] leading-[1.2] sm:leading-[1.3] lg:leading-[68px]">
+          <span className="text-black tracking-[-0.3px] sm:tracking-[-0.5px] lg:tracking-[-0.69px] font-medium">
             Everything You{" "}
           </span>
           <br />
-          <span className="text-[#0aa26c] tracking-[-0.69px] font-medium">
+          <span className="text-[#0aa26c] tracking-[-0.3px] sm:tracking-[-0.5px] lg:tracking-[-0.69px] font-medium">
             Need to Know
           </span>
         </h2>
       </motion.div>
 
-      <div className="py-16 px-4 bg-white">
-        <div className="max-w-[87rem] px-24 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="py-8 sm:py-12 lg:py-16 px-1 sm:px-3 lg:px-5 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-8">
             {/* Left Column */}
             <div>
               <CustomAccordion items={leftColumnItems} />
