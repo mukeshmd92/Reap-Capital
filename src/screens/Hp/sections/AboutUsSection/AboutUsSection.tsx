@@ -26,7 +26,7 @@ export const AboutUsSection = ({ id }: { id: string }) => {
           </div>
 
           {/* Main Content */}
-          <div className="max-w-[34rem] space-y-8 relative pt-5 px-8 sm:px-0 ">
+          <div className="max-w-[34rem] h-auto space-y-8 relative pt-5 px-8 sm:px-0 ">
             {/* Heading with Badge */}
             <div className="flex flex-wrap items-center justify-center gap-2">
               <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-medium ">
@@ -43,8 +43,8 @@ export const AboutUsSection = ({ id }: { id: string }) => {
                 Quantum Leap.
               </h1>
             </div>
-            <p className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto mt-0 sm:mt-4 pb-1">
-              <TextReveal className="-mt-20 flex items-center justify-center text-center ">
+            <p className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto pb-1">
+              <TextReveal className=" sm:-mt-20 flex items-center justify-center text-center ">
                 We help business owners access money quickly. Whether it&apos;s
                 to grow, manage cash flow, or grab new opportunities, we&apos;re
                 here to make funding easy.
