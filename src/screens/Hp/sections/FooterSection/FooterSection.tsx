@@ -13,12 +13,12 @@ export const FooterSection = () => {
         <img
           src={ICONS.FooterIcon}
           alt="logo"
-          className="h-auto w-lg object-contain"
+          className="h-auto w-md object-contain"
         />
       </div>
 
       {/* Horizontal lines section */}
-      <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] px-4 sm:px-6 md:px-8">
+      <div className="w-full max-w-[75rem]">
         {/* First line */}
         <div className="w-full h-px bg-white/10"></div>
 
@@ -32,7 +32,7 @@ export const FooterSection = () => {
           {/* Terms and Conditions link */}
           <Link
             to="/terms-and-conditions"
-            className="font-inter text-green-400 text-sm sm:text-sm hover:text-teal-300 transition-colors cursor-pointer select-none relative z-20 text-center sm:text-right"
+            className="font-inter text-[#0BA36C] text-sm sm:text-sm hover:text-teal-300 transition-colors cursor-pointer select-none relative z-20 text-center sm:text-right"
             onClick={navigateToTerms}
             style={{
               cursor: "pointer",
