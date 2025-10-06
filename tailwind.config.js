@@ -57,6 +57,23 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        inter: [
+          "Inter",
+          "Inter Display",
+          "Inter_Variable-Regular",
+          "Inter_Variable-Medium",
+          "Inter_Variable-SemiBold",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
+        poppins: [
+          "Poppins",
+          "Inter",
+          "ui-sans-serif",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       keyframes: {
         "accordion-down": {

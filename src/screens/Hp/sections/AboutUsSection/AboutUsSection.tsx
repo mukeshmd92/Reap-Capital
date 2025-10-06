@@ -16,64 +16,63 @@ export const AboutUsSection = ({ id }: { id: string }) => {
             />
             {/* <div className="w-[120px] h-[120px] bg-[url(https://c.animaapp.com/mfjdkgyvaVebQt/img/group-1686557879-1.png)] bg-[100%_100%]" /> */}
             <div className="flex flex-col">
-              <div className="text-black text-[2rem] sm:text-[47.33px] tracking-[-1.42px] [font-family:Inter Display,'Inter Display Placeholder',sans-serif] font-normal leading-normal text-black">
-                Reap
-              </div>
-              <div className="text-black text-[2rem] sm:text-[47.33px] tracking-[-3.31px] [font-family:Inter Display,'Inter Display Placeholder',sans-serif] font-normal leading-normal text-black">
-                Capital
-              </div>
+              <div className="text-black text-[2rem] sm:text-[47.33px] tracking-[-1.42px] font-inter font-normal leading-normal"></div>
+              Reap
+            </div>
+            <div className="text-black text-[2rem] sm:text-[47.33px] tracking-[-3.31px] font-inter font-normal leading-normal">
+              Capital
             </div>
           </div>
+        </div>
 
-          {/* Main Content */}
-          <div className="max-w-[34rem] h-auto space-y-8 relative pt-5 px-8 sm:px-0 ">
-            {/* Heading with Badge */}
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-medium ">
-                Reap Capital is powered by
-              </h1>
-              <div className=" flex items-center justify-center border-4 border-yellow-400 rounded-xl p-1 shadow-xl rotate-[10.02deg] overflow-hidden">
-                <img
-                  className=" w-[2rem] h-auto sm:w-[4rem]  object-contain"
-                  alt="Quantum Leap badge"
-                  src={ICONS.quantumLeap}
-                />
-              </div>
-              <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-medium ">
-                Quantum Leap.
-              </h1>
+        {/* Main Content */}
+        <div className="max-w-[34rem] h-auto space-y-8 relative pt-5 px-8 sm:px-0 ">
+          {/* Heading with Badge */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-inter font-medium ">
+              Reap Capital is powered by
+            </h1>
+            <div className=" flex items-center justify-center border-4 border-yellow-400 rounded-xl p-1 shadow-xl rotate-[10.02deg] overflow-hidden">
+              <img
+                className=" w-[2rem] h-auto sm:w-[4rem]  object-contain"
+                alt="Quantum Leap badge"
+                src={ICONS.quantumLeap}
+              />
             </div>
-            <p className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto pb-1">
-              <TextReveal className=" sm:-mt-20 flex items-center justify-center text-center ">
-                We help business owners access money quickly. Whether it&apos;s
-                to grow, manage cash flow, or grab new opportunities, we&apos;re
-                here to make funding easy.
-              </TextReveal>
-            </p>
+            <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-inter font-medium ">
+              Quantum Leap.
+            </h1>
+          </div>
+          <div className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto pb-1">
+            <TextReveal className=" sm:-mt-20 flex items-center justify-center text-center ">
+              We help business owners access money quickly. Whether it&apos;s to
+              grow, manage cash flow, or grab new opportunities, we&apos;re here
+              to make funding easy.
+            </TextReveal>
+          </div>
 
-            {/* overflow borders  */}
-            {/* left border  */}
-            <div className="absolute left-0 top-0 w-[3.5px] h-full border-r-2 border-dashed border-r-gray-300 scale-y-[-1.05] "></div>
-            {/* right border  */}
-            <div className="absolute right-0 top-0 w-[3.5px] h-full border-r-2 border-dashed border-r-gray-300 scale-y-[-1.05]"></div>
-            {/* bottom border  */}
-            <div className="absolute bottom-0 left-0 w-full h-[3.5px] border-b-2 border-dashed border-b-gray-300 scale-x-[1.05]"></div>
-            {/* top border  */}
-            <div className="absolute top-0 left-0 w-full h-[3.5px] border-t-2 border-dashed border-t-gray-300 scale-x-[1.05]"></div>
+          {/* overflow borders  */}
+          {/* left border  */}
+          <div className="absolute left-0 top-0 w-[3.5px] h-full border-r-2 border-dashed border-r-gray-300 scale-y-[-1.05] "></div>
+          {/* right border  */}
+          <div className="absolute right-0 top-0 w-[3.5px] h-full border-r-2 border-dashed border-r-gray-300 scale-y-[-1.05]"></div>
+          {/* bottom border  */}
+          <div className="absolute bottom-0 left-0 w-full h-[3.5px] border-b-2 border-dashed border-b-gray-300 scale-x-[1.05]"></div>
+          {/* top border  */}
+          <div className="absolute top-0 left-0 w-full h-[3.5px] border-t-2 border-dashed border-t-gray-300 scale-x-[1.05]"></div>
 
-            {/* corner dots  */}
-            <div className="absolute -top-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300 ">
-              <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
-            </div>
-            <div className="absolute -top-2 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
-              <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
-            </div>
-            <div className="absolute -bottom-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
-              <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
-            </div>
-            <div className="absolute bottom-6 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
-              <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
-            </div>
+          {/* corner dots  */}
+          <div className="absolute -top-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300 ">
+            <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
+          </div>
+          <div className="absolute -top-2 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+            <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
+          </div>
+          <div className="absolute -bottom-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+            <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
+          </div>
+          <div className="absolute bottom-6 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+            <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
           </div>
         </div>
       </div>

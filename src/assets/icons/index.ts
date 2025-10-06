@@ -21,6 +21,8 @@ import quantumLeap from "./quantumLeap.png";
 import reapCapitalBlack from "./ReapLogo-black.png";
 import reapCapitalWhite from "./ReapLogo-white.png";
 
+import FooterIcon from "./FooterIcon.png";
+
 export {
   logo,
   LeftRocket,
@@ -41,4 +43,5 @@ export {
   quantumLeap,
   reapCapitalBlack,
   reapCapitalWhite,
+  FooterIcon,
 };

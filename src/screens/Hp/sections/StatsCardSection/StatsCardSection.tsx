@@ -54,10 +54,10 @@ const StatsCardSection = () => {
                       />
                     </div>
                     <div className="w-full h-auto px-2 flex flex-col text-center sm:text-left mt-2 sm:mt-5">
-                      <div className="w-full font-semibold text-black text-[1.6rem] sm:text-3xl lg:text-4xl">
+                      <div className="w-full font-inter font-semibold text-black text-[1.6rem] sm:text-3xl lg:text-4xl">
                         {stat.number}
                       </div>
-                      <div className="w-full text-neutral-700 text-base sm:text-base leading-[20px] sm:leading-[24px] lg:leading-[26px] break-words">
+                      <div className="w-full font-inter text-neutral-700 text-base sm:text-base leading-[20px] sm:leading-[24px] lg:leading-[26px] break-words">
                         {stat.description}
                       </div>
                     </div>
