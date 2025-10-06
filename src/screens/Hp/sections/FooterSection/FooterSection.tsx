@@ -13,7 +13,7 @@ export const FooterSection = () => {
         <img
           src={ICONS.FooterIcon}
           alt="logo"
-          className="h-auto w-md object-contain"
+          className="h-auto w-lg md:w-md bject-contain"
         />
       </div>
 

@@ -33,7 +33,7 @@ const LoansSection = () => {
   ];
 
   return (
-    <section className="w-full px-4 py-16">
+    <section className="w-full px-4 py-16 lg:mt-10">
       {/* Header */}
       <motion.header
         className="flex flex-col items-center mb-16"

@@ -28,13 +28,13 @@ const MyTeamSection = ({ id }: { id: string }) => {
   ];
   return (
     <section
-      className="w-full self-center relative px-4 pb-8 md:pb-[7rem]"
+      className="w-full self-center relative px-4 pb-8 md:pb-[7rem] lg:mt-10"
       id={id}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
-          className="flex flex-col items-center mb-16"
+          className="flex flex-col items-center mb-4"
           initial={{ opacity: 0, y: 90 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -43,7 +43,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
           <header className="flex flex-col items-center mb-16 translate-y-[-1rem] animate-fade-in opacity-0">
             <HeaderBrick text="Team" />
 
-            <h2 className=" flex flex-col items-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] leading-[40px] md:leading-[58px] [font-family:'Poppins',Helvetica] max-w-md">
+            <h2 className=" flex flex-col items-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] leading-[40px] md:leading-[58px] max-w-md">
               <span className="text-black tracking-[-0.69px]">About the </span>
               <span className="text-[#0aa26c] tracking-[-0.69px]">
                 Founders
@@ -71,7 +71,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-4 md:mb-6">
                       {teamMembers[0].name}
                     </h3>
-                    <p className="text-base md:text-base text-neutral-500 leading-normal [font-family:'Poppins',Helvetica] max-w-lg">
+                    <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">
                       {teamMembers[0].description}
                     </p>
                   </div>
@@ -90,10 +90,10 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     alt={teamMembers[1].name}
                     className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-3 md:mb-4">
+                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal  mb-3 md:mb-4">
                     {teamMembers[1].name}
                   </h3>
-                  <p className="text-base md:text-base text-neutral-500 leading-normal [font-family:'Poppins',Helvetica]">
+                  <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] ">
                     {teamMembers[1].description}
                   </p>
                 </div>
@@ -111,10 +111,10 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     alt={teamMembers[2].name}
                     className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal [font-family:'Inter_Variable-SemiBold',Helvetica] mb-3 md:mb-4">
+                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal  mb-3 md:mb-4">
                     {teamMembers[2].name}
                   </h3>
-                  <p className="text-base md:text-base text-neutral-500 leading-normal [font-family:'Poppins',Helvetica]">
+                  <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] ">
                     {teamMembers[2].description}
                   </p>
                 </div>

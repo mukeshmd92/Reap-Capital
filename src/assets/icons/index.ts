@@ -22,6 +22,7 @@ import reapCapitalBlack from "./ReapLogo-black.png";
 import reapCapitalWhite from "./ReapLogo-white.png";
 
 import FooterIcon from "./FooterIcon.png";
+import AboutIcon from "./AboutLogo.png";
 
 export {
   logo,
@@ -44,4 +45,5 @@ export {
   reapCapitalBlack,
   reapCapitalWhite,
   FooterIcon,
+  AboutIcon,
 };

@@ -4,24 +4,16 @@ import { TextReveal } from "../../../../components/ui/text-reveal";
 
 export const AboutUsSection = ({ id }: { id: string }) => {
   return (
-    <section className="relative w-full h-auto py-16 mt-20 sm:mt-6" id={id}>
-      <div className="relative max-w-4xl mx-auto px-4">
+    <section className="relative w-full h-auto py-16 mt-6 lg:mt-20" id={id}>
+      <div className="relative max-w-4xl mx-auto px-4 flex flex-col items-center justify-center">
         <div className="relative z-10 flex flex-col items-center text-center">
           {/* Logo Section */}
           <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] flex items-center space-x-4">
             <img
-              className=" w-[5rem] sm:w-[7rem] h-auto object-contain"
+              className=" w-[12.5rem] lg:w-[18rem] h-auto object-contain"
               alt="Background graphic"
-              src={ICONS.logo}
+              src={ICONS.AboutIcon}
             />
-            {/* <div className="w-[120px] h-[120px] bg-[url(https://c.animaapp.com/mfjdkgyvaVebQt/img/group-1686557879-1.png)] bg-[100%_100%]" /> */}
-            <div className="flex flex-col">
-              <div className="text-black text-[2rem] sm:text-[47.33px] tracking-[-1.42px] font-inter font-normal leading-normal"></div>
-              Reap
-            </div>
-            <div className="text-black text-[2rem] sm:text-[47.33px] tracking-[-3.31px] font-inter font-normal leading-normal">
-              Capital
-            </div>
           </div>
         </div>
 

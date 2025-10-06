@@ -20,7 +20,7 @@ export const SecuritySupportSection = () => {
     },
   ];
   return (
-    <section className="max-w-[87rem] mx-auto py-4 sm:py-6 lg:py-8 px-4 sm:px-8 lg:px-22">
+    <section className="max-w-[87rem] mx-auto py-4 sm:py-6 lg:py-8 px-4 sm:px-8 lg:px-22 lg:mt-10">
       <div>
         {/* Header Section */}
         <motion.div
