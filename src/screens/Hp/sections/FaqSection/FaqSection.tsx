@@ -59,7 +59,7 @@ const FaqSection = () => {
   const rightColumnItems = faqItems.slice(5);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 lg:mt-10">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-10">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ const FaqSection = () => {
         <Badge className="mb-4 p-[0.5rem] px-[1.5rem] bg-white rounded-tl-3xl text-sm sm:text-base lg:text-lg border border-solid border-[#1caa7b] text-[#109157] font-semibold">
           FAQs
         </Badge>
-        <h2 className="[font-family:'Poppins',Helvetica] font-medium text-3xl sm:text-4xl lg:text-5xl text-center tracking-[-0.5px] sm:tracking-[-1px] lg:tracking-[-1.44px] leading-[1.2] sm:leading-[1.3] lg:leading-[68px]">
+        <h2 className=" font-medium text-3xl sm:text-4xl lg:text-5xl text-center tracking-[-0.5px] sm:tracking-[-1px] lg:tracking-[-1.44px] leading-[1.2] sm:leading-[1.3] lg:leading-[68px]">
           <span className="text-black tracking-[-0.3px] sm:tracking-[-0.5px] lg:tracking-[-0.69px] font-medium">
             Everything You{" "}
           </span>

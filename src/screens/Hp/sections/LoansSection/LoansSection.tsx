@@ -33,7 +33,7 @@ const LoansSection = () => {
   ];
 
   return (
-    <section className="w-full px-4 py-16 lg:mt-10">
+    <section className="w-full px-4 py-16 mt-10">
       {/* Header */}
       <motion.header
         className="flex flex-col items-center mb-16"
@@ -43,7 +43,7 @@ const LoansSection = () => {
         viewport={{ once: true }}
       >
         <HeaderBrick text="Loans" />
-        <h2 className="flex flex-col items-center justify-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] md:leading-[58px] [font-family:'Poppins',Helvetica] max-w-xl">
+        <h2 className="flex flex-col items-center justify-center text-3xl md:text-5xl font-medium text-center tracking-[-1.44px] md:leading-[58px] max-w-xl">
           <span className="text-black tracking-[-0.69px]">
             Business Loans Made
           </span>
@@ -51,14 +51,14 @@ const LoansSection = () => {
             <span className="text-black">for</span> Real Business Needs
           </span>
         </h2>
-        <p className="[font-family:'Inter_Variable-Regular',Helvetica] flex items-center justify-center font-normal text-neutral-700 text-lg text-center  leading-[26px] max-w-[32rem] mt-4">
+        <p className=" flex items-center justify-center font-normal text-neutral-700 text-md sm:text-lg text-center  leading-[26px] max-w-[32rem] mt-4">
           Choose the right financing solution to manage cash flow, expand
           operations, or unlock working capital without any delays or confusion.
         </p>
       </motion.header>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[75rem] mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[75rem] mx-auto px-1.5 md:px-0">
         {featuresData.map((feature, index) => (
           <motion.div
             key={index}
@@ -69,9 +69,9 @@ const LoansSection = () => {
           >
             <Card className="bg-white rounded-[60px_20px_20px_20px] border border-[#c2c2c2] p-0 overflow-hidden">
               <CardContent className="p-0 md:h-[263px] relative">
-                <div className="flex flex-col  md:flex-row items-center md:items-start gap-4 p-2 h-full overflow-visible">
+                <div className="flex flex-col  md:flex-row items-center gap-4 p-2 h-full overflow-visible">
                   {/* Icon Section */}
-                  <div className="relative   w-[200px] h-[200px] mt-[22px] flex-shrink-0">
+                  <div className="relative   w-[200px] h-auto md:h-[130px] mt-[22px] flex-shrink-0">
                     <img
                       className="w-full h-full"
                       alt="Feature icon"

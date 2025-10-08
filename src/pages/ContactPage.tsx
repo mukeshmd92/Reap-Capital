@@ -10,15 +10,15 @@ const ContactPage = () => {
         className="overflow-hidden pb-8 w-full relative flex justify-center bg-cover bg-center rounded-b-4xl bg-black"
         style={{ backgroundImage: `url(${ContactBg})` }}
       >
-        <div className=" w-[75rem] flex flex-col md:flex-row justify-between items-center pb-8 ">
+        <div className=" w-[75rem] flex flex-col md:flex-row justify-between items-center pb-8 mt-18 ">
           <div className="flex flex-col gap-5 mt-43 md:mt-[-50px]  w-94 md:w-152   text-white items-center md:items-start  ">
-            <div >
-              <h1 className=" text-center md:text-start  text-3xl md:text-5xl   font-medium ">
+            <div>
+              <h1 className=" text-center md:text-start  text-4xl md:text-5xl leading-5 sm:leading-17  ">
                 <TextAnimate
                   animation="blurInUp"
                   by="character"
                   once
-                  delay={1.2}
+                  delay={0.5}
                   duration={0.6}
                 >
                   Empowering the MSMEs
@@ -27,7 +27,7 @@ const ContactPage = () => {
                   animation="blurInUp"
                   by="character"
                   once
-                  delay={2.5}
+                  delay={1.3}
                   duration={0.6}
                 >
                   with instant access and
@@ -36,7 +36,7 @@ const ContactPage = () => {
                   animation="blurInUp"
                   by="character"
                   once
-                  delay={3.8}
+                  delay={2}
                   duration={0.6}
                 >
                   instant solutions.
@@ -52,7 +52,7 @@ const ContactPage = () => {
                 </div>
                 <div className="flex  gap-2">
                   <BadgeCheck className="w-5 h-5" />
-                  <h3>Fast Track Your Funding</h3>
+                  <h3 className="">Fast Track Your Funding</h3>
                 </div>
               </div>
             </div>

@@ -99,11 +99,11 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-transparent z-50">
-      <div className="max-w-[87rem] mx-auto flex flex-row justify-between items-center py-2 md:py-6 lg:py-5 lg:4 lg:px-24 md:px-20 px-7 backdrop-blur-xs sm:backdrop-blur-none">
+      <div className="max-w-[87rem] mx-auto flex flex-row justify-between items-center py-6 md:py-6 lg:py-5 lg:4 lg:px-24 md:px-20 px-5 backdrop-blur-xs sm:backdrop-blur-none">
         <div>
           <Link to="/">
             <img
-              className="w-[9rem] transition-all duration-300"
+              className="w-[8.2rem] transition-all duration-300"
               src={
                 isContactPage || isHeroVisible
                   ? ICONS.reapCapitalWhite

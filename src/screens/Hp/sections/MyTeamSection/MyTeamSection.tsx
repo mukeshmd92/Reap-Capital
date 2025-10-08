@@ -28,7 +28,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
   ];
   return (
     <section
-      className="w-full self-center relative px-4 pb-8 md:pb-[7rem] lg:mt-10"
+      className="w-full self-center relative px-4 pb-8 md:pb-[7rem] mt-10"
       id={id}
     >
       <div className="max-w-7xl mx-auto">
@@ -53,12 +53,12 @@ const MyTeamSection = ({ id }: { id: string }) => {
         </motion.div>
 
         {/* Team Members Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start max-w-6xl mx-auto px-1.5 sm:px-0">
           {/* Rajiv Talreja - Large Profile */}
           <div className="lg:col-span-2 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             <Card className="border-0 shadow-none bg-transparent">
               <CardContent className="p-0">
-                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-8 items-center">
+                <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-8 items-center ">
                   {/* Image first on mobile, then text */}
                   <div className="order-1 lg:order-1">
                     <img
@@ -67,8 +67,8 @@ const MyTeamSection = ({ id }: { id: string }) => {
                       className="w-full h-auto max-w-[498px]"
                     />
                   </div>
-                  <div className="order-2 lg:order-2 flex flex-col justify-start pt-0 lg:pt-8">
-                    <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-4 md:mb-6">
+                  <div className="order-2 lg:order-2 flex flex-col justify-start pt-0 lg:pt-8 px-1">
+                    <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
                       {teamMembers[0].name}
                     </h3>
                     <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">
@@ -81,7 +81,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
           </div>
 
           {/* Karan Hasija */}
-          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] pt-14 md:pt-0 px-1.5 md:px-0">
             <Card className="border-0 shadow-none bg-transparent">
               <CardContent className="p-0">
                 <div className="flex flex-col">
@@ -90,10 +90,10 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     alt={teamMembers[1].name}
                     className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal  mb-3 md:mb-4">
+                  <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
                     {teamMembers[1].name}
                   </h3>
-                  <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] ">
+                  <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">
                     {teamMembers[1].description}
                   </p>
                 </div>
@@ -102,7 +102,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
           </div>
 
           {/* Akash Kedia */}
-          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+          <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] pt-14 md:pt-0 px-1.5 md:px-0">
             <Card className="border-0 shadow-none bg-transparent">
               <CardContent className="p-0">
                 <div className="flex flex-col">
@@ -111,10 +111,10 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     alt={teamMembers[2].name}
                     className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-2xl md:text-[32px] font-semibold text-black tracking-[-0.96px] leading-normal  mb-3 md:mb-4">
+                  <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
                     {teamMembers[2].name}
                   </h3>
-                  <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] ">
+                  <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">
                     {teamMembers[2].description}
                   </p>
                 </div>

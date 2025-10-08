@@ -14,16 +14,16 @@ const TermAndCondition = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
+    <div className="">
       <motion.div
-        className="relative overflow-hidden px-4 py-14 sm:py-0 sm:px-8 md:px-16 lg:px-38 rounded-b-4xl"
+        className="relative overflow-hidden px-4 py-14 sm:py-0 sm:px-8 md:px-16 lg:px-38 rounded-b-4xl bg-red-500"
         style={{ backgroundImage: `url(${bg})` }}
         initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
         animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
         transition={{ duration: 1.5, ease: "easeOut" }}
       >
-        <div className="py-8 sm:py-16 md:py-24 lg:py-31">
-          <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mt-4 sm:mt-8 md:mt-13">
+        <div className="py-8 sm:py-16 md:py-24 lg:py-31 relative flex items-center w-[60%] self-center">
+          <p className="  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mt-4 sm:mt-8 md:mt-13">
             Terms and Condition
           </p>
         </div>
@@ -84,8 +84,8 @@ const TermAndCondition = () => {
           />
         </div>
       </motion.div>
-      <div>
-        <div className="px-4 sm:px-6 md:px-8 lg:px-16 xl:px-50">
+      <div className="relative flex items-center justify-center">
+        <div className="w-[90%] sm:w-[60%] mt-10">
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold my-4 sm:my-6 md:my-8 leading-tight">
             COMPREHENSIVE TERMS OF USE, PRIVACY POLICY & DATA PROTECTION POLICY
           </h2>

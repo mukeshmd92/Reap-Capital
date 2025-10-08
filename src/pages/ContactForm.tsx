@@ -106,13 +106,13 @@ const ContactForm = () => {
     >
       <h2 className="text-lg font-medium mb-4">Check If You’re Eligible</h2>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-4">
+      <div className="flex flex-col sm:flex-row gap-4 mb-4 overflow-hidden">
         <input
           type="text"
           required
           value={formData.name}
           onChange={(e) => handleInputChange("name", e.target.value)}
-          className="flex-1 bg-[#f0f0f0] rounded-lg px-3 py-2.5 placeholder:font-semibold placeholder:text-[#9c9c9c]"
+          className="flex-1 bg-[#f0f0f0] rounded-lg px-3 py-2.5 placeholder:font-medium placeholder:text-[#9c9c9c]"
           placeholder="Name as per PAN Card"
         />
         <input
@@ -125,7 +125,7 @@ const ContactForm = () => {
             }
             handleInputChange("phone", e.target.value.replace(/[^0-9]/g, ""));
           }}
-          className="flex-1 bg-[#f0f0f0]  rounded-lg px-3 py-2.5 placeholder:font-semibold placeholder:text-[#9c9c9c]"
+          className="flex-1 bg-[#f0f0f0]  w-full rounded-lg px-3 py-2.5 placeholder:font-medium placeholder:text-[#9c9c9c]"
           placeholder="Mobile Number"
           maxLength={10}
         />

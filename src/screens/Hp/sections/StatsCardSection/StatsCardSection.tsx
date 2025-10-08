@@ -33,7 +33,7 @@ const StatsCardSection = () => {
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-8">
       <div className="max-w-[75rem] mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 lg:gap-10 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 lg:gap-10 justify-items-center px-1 md:px-0">
           {statsCards.map((stat, index) => (
             <motion.div
               key={index}
@@ -54,7 +54,7 @@ const StatsCardSection = () => {
                       />
                     </div>
                     <div className="w-full h-auto flex flex-col text-center sm:text-left mt-2 sm:mt-5">
-                      <div className="w-full font-inter font-semibold text-black text-[1.6rem] sm:text-3xl lg:text-4xl">
+                      <div className="w-full font-inter font-semibold text-black text-[1.7rem] sm:text-3xl lg:text-4xl">
                         {stat.number}
                       </div>
                       <div className="w-full font-inter text-neutral-700 text-base sm:text-base leading-[20px] sm:leading-[24px] lg:leading-[26px] break-words">

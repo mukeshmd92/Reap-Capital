@@ -13,17 +13,17 @@ export const FooterSection = () => {
         <img
           src={ICONS.FooterIcon}
           alt="logo"
-          className="h-auto w-lg md:w-md bject-contain"
+          className="h-auto w-lg md:w-md object-contain"
         />
       </div>
 
       {/* Horizontal lines section */}
-      <div className="w-full max-w-[75rem]">
+      <div className="w-full max-w-[75rem] flex flex-col items-center">
         {/* First line */}
-        <div className="w-full h-px bg-white/10"></div>
+        <div className="w-[90%] sm:w-full h-px bg-white/10"></div>
 
         {/* Content between lines */}
-        <div className="flex flex-col sm:flex-row justify-between items-center py-4 sm:py-6 relative z-10 gap-3 sm:gap-0">
+        <div className="flex flex-col sm:flex-row justify-between items-center w-full py-4 sm:py-6 relative z-10 gap-3 sm:gap-0">
           {/* Copyright text */}
           <span className="font-inter text-white text-sm sm:text-sm md:text-md text-center sm:text-left">
             All copyrights reserve at @ReapCapital
@@ -46,7 +46,7 @@ export const FooterSection = () => {
         </div>
 
         {/* Second line */}
-        <div className="w-full h-px bg-white/10"></div>
+        <div className="  w-[90%] sm:w-full h-px bg-white/10"></div>
       </div>
 
       {/* Subtle teal gradient at bottom */}
