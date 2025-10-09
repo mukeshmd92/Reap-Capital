@@ -15,6 +15,8 @@ const Navbar = () => {
   // Check if we're on the contact page
   const isContactPage = location.pathname === "/contact";
 
+  const isTermsPage = location.pathname === "/terms-and-conditions";
+
   // Set up intersection observer to detect visible sections
   useEffect(() => {
     if (!isHomePage) return;
@@ -105,7 +107,7 @@ const Navbar = () => {
             <img
               className="w-[8.2rem] transition-all duration-300"
               src={
-                isContactPage || isHeroVisible
+                isContactPage || isHeroVisible || isTermsPage
                   ? ICONS.reapCapitalWhite
                   : ICONS.reapCapitalBlack
               }
