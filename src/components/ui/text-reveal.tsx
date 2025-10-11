@@ -27,30 +27,27 @@ export const TextReveal: FC<TextRevealProps> = ({ children, className }) => {
   const words = children.split(" ");
 
   return (
-    <div>
-      <div ref={targetRef} className={cn("relative z-0 h-[50vh]", className)}>
-        <div
+    <div ref={targetRef} className={cn("relative z-0 h-[50vh]", className)}>
+      <div
+        className={
+          "sticky top-0 mx-auto flex max-w-full bg-transparent sm:max-w-4xl items-center justify-center px-[1rem] text-center"
+        }
+      >
+        <span
           className={
-            "sticky top-0 mx-auto flex max-w-full bg-transparent sm:max-w-4xl items-center justify-center px-[1rem] text-center mt-6 sm:mt-0"
+            "flex flex-wrap justify-center items-center p-2 sm:p-5 xs:text-sm text-2xl md:text-4xl text-center font-normal leading-12 md:leading-16"
           }
         >
-          <span
-            ref={targetRef}
-            className={
-              "flex flex-wrap justify-center items-center p-2 sm:p-5 xs:text-sm text-2xl text-center font-normal text-black/20 dark:text-white/20 md:p-8 md:text-2xl lg:p-10 lg:text-3xl xl:text-4xl xs:leading-2 leading-12 md:leading-12 lg:leading-12 xl:leading-12"
-            }
-          >
-            {words.map((word, i) => {
-              const start = i / words.length;
-              const end = start + 1 / words.length;
-              return (
-                <Word key={i} progress={scrollYProgress} range={[start, end]}>
-                  {word}
-                </Word>
-              );
-            })}
-          </span>
-        </div>
+          {words.map((word, i) => {
+            const start = i / words.length;
+            const end = start + 1 / words.length;
+            return (
+              <Word key={i} progress={scrollYProgress} range={[start, end]}>
+                {word}
+              </Word>
+            );
+          })}
+        </span>
       </div>
     </div>
   );
@@ -63,13 +60,20 @@ interface WordProps {
 }
 
 const Word: FC<WordProps> = ({ children, progress, range }) => {
+  // Animate opacity for reveal
   const opacity = useTransform(progress, range, [0, 1]);
+
   return (
-    <span className="xl:lg-3 relative mx-1 lg:mx-1.5 text-black/20 dark:text-white/20">
-      <span className="absolute opacity-30">{children}</span>
+    <span className="relative mx-1 lg:mx-1.5">
+      {/* Static base text (same black/gray color, lower opacity for layering) */}
+      <span className="absolute text-black-200/50 dark:text-black/50">
+        {children}
+      </span>
+
+      {/* Animated reveal text (fully visible) */}
       <motion.span
-        style={{ opacity: opacity }}
-        className={"text-red-500 dark:text-[#000000]"}
+        style={{ opacity }}
+        className=" font-medium dark:text-black"
       >
         {children}
       </motion.span>

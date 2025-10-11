@@ -59,7 +59,7 @@ const FaqSection = () => {
   const rightColumnItems = faqItems.slice(5);
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-10">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 mt-5">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

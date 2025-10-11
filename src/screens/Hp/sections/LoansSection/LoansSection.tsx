@@ -51,7 +51,7 @@ const LoansSection = () => {
             <span className="text-black">for</span> Real Business Needs
           </span>
         </h2>
-        <p className=" flex items-center justify-center font-normal text-neutral-700 text-md sm:text-lg text-center  leading-[26px] max-w-[32rem] mt-4">
+        <p className=" flex items-center justify-center font-normal text-neutral-700 text-md md:text-sm text-center  leading-[26px] max-w-[26rem] mt-4">
           Choose the right financing solution to manage cash flow, expand
           operations, or unlock working capital without any delays or confusion.
         </p>

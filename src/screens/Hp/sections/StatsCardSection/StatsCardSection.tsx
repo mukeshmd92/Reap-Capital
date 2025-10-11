@@ -31,7 +31,7 @@ const StatsCardSection = () => {
   ];
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-8">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-3">
       <div className="max-w-[75rem] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8 lg:gap-10 justify-items-center px-1 md:px-0">
           {statsCards.map((stat, index) => (

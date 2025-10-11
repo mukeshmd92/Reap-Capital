@@ -28,7 +28,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
   ];
   return (
     <section
-      className="w-full self-center relative px-4 pb-8 md:pb-[7rem] mt-10"
+      className="w-full self-center relative px-4 pb-8 md:pb-[7rem] mt-19"
       id={id}
     >
       <div className="max-w-7xl mx-auto">
@@ -68,7 +68,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     />
                   </div>
                   <div className="order-2 lg:order-2 flex flex-col justify-start pt-0 lg:pt-8 px-1">
-                    <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
+                    <h3 className="text-4xl md:text-6xl lg:text-[70px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
                       {teamMembers[0].name}
                     </h3>
                     <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">
@@ -90,7 +90,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     alt={teamMembers[1].name}
                     className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
+                  <h3 className="text-4xl md:text-6xl lg:text-[40px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
                     {teamMembers[1].name}
                   </h3>
                   <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">
@@ -111,7 +111,7 @@ const MyTeamSection = ({ id }: { id: string }) => {
                     alt={teamMembers[2].name}
                     className="w-full h-auto max-w-[509px] mb-4 md:mb-6"
                   />
-                  <h3 className="text-4xl md:text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
+                  <h3 className="text-4xl md:text-6xl lg:text-[40px] font-medium text-black tracking-[-2.82px] leading-tight mb-4 md:mb-6">
                     {teamMembers[2].name}
                   </h3>
                   <p className="text-base md:text-base text-neutral-500 leading-normal lg:leading-[25.6px] max-w-lg">

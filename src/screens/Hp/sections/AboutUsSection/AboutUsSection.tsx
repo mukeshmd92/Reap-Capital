@@ -18,30 +18,41 @@ export const AboutUsSection = ({ id }: { id: string }) => {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-[34rem] h-auto space-y-8 relative pt-5 px-8 sm:px-0 ">
+  <div className="relative max-w-[34rem] w-full h-160 pt-8 md:pt-5  px-3 sm:px-0 mt-6 md:mt-0">
+
           {/* Heading with Badge */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-inter font-medium ">
+          <div className="flex flex-wrap text-center justify-center ">
+            <h1 className="text-black text-[1.8rem] md:text-[2.5rem] font-inter font-bold md:font-medium  ">
               Reap Capital is powered by
             </h1>
-            <div className=" flex items-center justify-center border-4 border-yellow-400 rounded-xl p-1 shadow-xl rotate-[10.02deg] overflow-hidden">
+            <div className=" flex items-center justify-center border-2 md:border-4 border-yellow-400 rounded-xl py-0.7 px-1 md:py-2 md:px-0 shadow-xl rotate-[10.02deg] overflow-hidden">
               <img
-                className=" w-[2rem] h-auto sm:w-[4rem]  object-contain"
+                className=" w-[2rem] h-11 sm:w-[4rem]  object-contain"
                 alt="Quantum Leap badge"
                 src={ICONS.quantumLeap}
               />
             </div>
-            <h1 className="text-black text-[1.6rem] sm:text-[2.5rem] font-inter font-medium ">
+            <div className="pt-2">
+ <h1 className="text-black text-[1.7rem] md:text-[2.5rem]  font-inter font-bold md:font-medium  ">
               Quantum Leap.
             </h1>
+            </div>
+           
           </div>
-          <div className="text-black text-[2.4rem] font-normal max-w-[100%] mx-auto pb-1">
-            <TextReveal className=" sm:-mt-20 flex items-center justify-center text-center ">
-              We help business owners access money quickly. Whether it&apos;s to
-              grow, manage cash flow, or grab new opportunities, we&apos;re here
-              to make funding easy.
-            </TextReveal>
+          <div>
+            
           </div>
+         
+        <div className="mt-1 md:mt-1  leading-relaxed text-base md:text-lg text-center font-semibold ">
+  <TextReveal className="flex flex-col text-red-700">
+    We help business owners access money quickly. Whether it&apos;s to grow,
+    manage cash flow, or grab new opportunities, we&apos;re here to make
+    funding easy.
+  </TextReveal>
+ 
+</div>
+
+
 
           {/* overflow borders  */}
           {/* left border  */}
@@ -63,7 +74,7 @@ export const AboutUsSection = ({ id }: { id: string }) => {
           <div className="absolute -bottom-2 -left-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
             <div className="bg-green-600 h-1.5 w-1.5 rounded-full"></div>
           </div>
-          <div className="absolute bottom-6 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
+          <div className="absolute -bottom-2 -right-2 bg-gray-50 p-1.5 rounded-full shadow-lg border-1 border-gray-300">
             <div className="bg-green-600 h-1.5 w-1.5 rounded-full "></div>
           </div>
         </div>
