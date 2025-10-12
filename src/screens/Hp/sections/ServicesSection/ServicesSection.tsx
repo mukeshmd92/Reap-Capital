@@ -59,7 +59,7 @@ export const ServicesSection = () => {
                     />
                   </div>
                   <div className="order-1 lg:order-2 flex flex-col justify-start pt-0 lg:pt-8">
-                    <h3 className="text-6xl lg:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-6">
+                    <h3 className="text-8xl md:text-[94px] font-medium text-black tracking-[-2.82px] leading-tight [font-family:'Inter_Variable-Medium',Helvetica] mb-6">
                       {teamMembers[0].name}
                     </h3>
                     <p className="text-base text-neutral-800 leading-normal [font-family:'Poppins',Helvetica] max-w-lg">

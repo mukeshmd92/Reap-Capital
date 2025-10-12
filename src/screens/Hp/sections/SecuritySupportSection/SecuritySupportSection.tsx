@@ -53,7 +53,7 @@ export const SecuritySupportSection = () => {
             </p>
           </div>
 
-          <div className="max-w-[23rem] sm:max-w-[32rem] mx-auto text-center mt-4 text-gray-700 text-base sm:text-base lg:text-[1.125rem] px-4">
+          <div className="max-w-[23rem] sm:max-w-[32rem] mx-auto text-center mt-4 text-gray-700 text-base sm:text-base lg:text-[1rem] px-4">
             We never ask for additional fees to speed up processing or reduce
             interest rates. What you see is what you get.
           </div>

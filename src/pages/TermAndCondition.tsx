@@ -7,6 +7,7 @@ import toparrow from "../assets/icons/toparrow.svg";
 import sidearrow from "../assets/images/sidearrow.png";
 import down2 from "../assets/images/down2.png";
 import Downmoney from "../assets/images/Downmoney.png";
+import { TextAnimate } from "../components/ui/text-animate"
 import { useEffect } from "react";
 
 const TermAndCondition = () => {
@@ -15,75 +16,109 @@ const TermAndCondition = () => {
   }, []);
   return (
     <div className="">
-      <motion.div
-        className="relative overflow-hidden px-4 py-14 sm:py-0 sm:px-8 md:px-16 lg:px-38 rounded-b-4xl bg-red-500"
-        style={{ backgroundImage: `url(${bg})` }}
-        initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
-        animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
-        transition={{ duration: 1.5, ease: "easeOut" }}
-      >
-        <div className="py-8 sm:py-16 md:py-24 lg:py-31 relative flex items-center w-[60%] self-center">
-          <p className="  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mt-4 sm:mt-8 md:mt-13">
-            Terms and Condition
-          </p>
-        </div>
-        <motion.div
-          className="absolute top-[-20px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-15 rounded-b-full w-32 sm:w-40 md:w-200 lg:w-370 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10"
+     <motion.div
+  className="relative overflow-hidden px-4 py-14 sm:py-0 sm:px-8 md:px-16 lg:px-38 rounded-b-4xl "
+  initial={{ y: -200, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 1.5, ease: "easeOut" }}
+>
+  {/* Background layer (z-0) */}
+  <div
+    className="absolute inset-0 bg-center flex  justify-center items-center0   bg-cover z-0"
+    style={{
+      backgroundImage: `url(${bg})`,
+      // optional: slightly dim for contrast
+      // backgroundColor: 'rgba(0,0,0,0.25)', backgroundBlendMode: 'overlay'
+    }}
+    aria-hidden="true"
+  />
+
+  {/* Foreground wrapper (content + all absolute images) */}
+  <div className="relative   z-10">
+    <div className="py-8 sm:py-16 md:py-24 lg:py-35    self-center ">
+      <p className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold  text-white mt-4 sm:mt-8 md:mt-13">
+        
+        <TextAnimate
+                        animation="blurInUp"
+                        by="character"
+                        once
+                        delay={1}
+                        duration={1}
+                      >
+                        Terms and Condition
+                      </TextAnimate>
+      </p>
+    </div>
+
+    <motion.div
+      className="absolute top-[-60px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-25 rounded-b-full w-82 sm:w-40 md:w-200 lg:w-340 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10 z-20"
+      initial={{ y: -200, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
+      <img src={toparrow} alt="" className="w-full h-auto" />
+    </motion.div>
+
+   <div className="absolute right-[160px] md:right-[704px] mt-[-13px] md:mt-[-205px]">
+       <motion.img
+       src={Downmoney}
+       className="w-39 h-30 md:w-90 md:h-98 rotate-120deg] shrink-0 aspect-[201.17/301.89]"
+       initial={{ y: 200, opacity: 0 }}
+       animate={{ y: 0, opacity: 1 }}
+       transition={{ duration: 1, delay: 1.1 }}
+     />
+     
+     </div>
+      
+               <div className='absolute ml-75 mt-[-30px] md:ml-182 md:mt-[-170px] '>
+             <motion.img
+             className=" w-30 h-40 md:w-80 md:h-78 rotate-[20.deg] shrink-0 aspect-[201.17/301.89]"
+       src={down2}
+       initial={{ y: 200, opacity: 0 }}
+       animate={{ y: 0, opacity: 1 }}
+       transition={{ duration: 1, delay: 1 }}
+     />
+     <motion.div
+          className="absolute top-[-10px] md:top-[-40px] ml-5 md:ml-15 rounded-b-full w-220 md:w-370 pr-4 py-10"
           initial={{ y: -200, opacity: 0 }} // starts above screen
           animate={{ y: 0, opacity: 1 }} // slides down to normal position
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1,ease:"easeOut" }}
         >
-          <img src={toparrow} alt="" className="w-full h-auto" />
+          <img src={toparrow} alt="" className="" />
         </motion.div>
+             </div>  
+             <div className='  absolute mt-[-80px] ml-[300px] md:mr-[-390px]   md:mt-[-240px] md:ml-[1140px]'>
+              <motion.img
+       src={sidearrow}
+       className="mix-blend-color-dodge h-20 md:h-50 md:w-53 ml-[50px] md:ml-[-20px] "
+       initial={{ rotate: 90, x: 200, opacity: 0 }}
+       animate={{ rotate: 290, x: 0, opacity: 1 }}
+       transition={{ duration: 1, delay: 1 }}
+     />
+      </div>
+      <div  className=' absolute mt-[-200px] mr-[-390px]   md:mt-[-280px] md:ml-[-120px]'>
+ <motion.img
+        src={bluringimg}
+        className="mix-blend-color-dodge w-29 md:w-38"
+        initial={{ y: -200, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut"}}
+      />
+      </div>
+     
+      <div className=' absolute mt-[-57px]  ml-[-50px]  md:mt-[-190px] md:ml-[-200px]'>
+                 <motion.img
+        src={Rocket}
+        className="h-36 md:h-61"
+        initial={{ x: -300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 1  }}
+      />
+      
+              </div>
+  </div>
+</motion.div>
 
-        <div className="absolute right-4 sm:right-8 md:right-[160px] lg:right-[704px] mt-[-60px] sm:mt-[-80px] md:mt-[-110px] lg:mt-[-205px]">
-          <motion.img
-            src={Downmoney}
-            className="w-8 h-10 sm:w-12 sm:h-14 md:w-43 md:h-50 lg:w-90 lg:h-98 rotate-[120deg] shrink-0 aspect-[201.17/301.89]"
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.1 }}
-          />
-        </div>
-
-        <div className="absolute left-4 sm:left-8 md:ml-75 lg:ml-182 mt-20 sm:mt-32 md:mt-185 lg:mt-[-170px]">
-          <motion.img
-            className="w-6 h-8 sm:w-8 sm:h-10 md:w-30 md:h-40 lg:w-80 lg:h-78 rotate-[20deg] shrink-0 aspect-[201.17/301.89]"
-            src={down2}
-            initial={{ y: 200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-          />
-        </div>
-        <div className="absolute right-4 sm:right-8 md:right-[-390px] lg:ml-[1140px] mt-20 sm:mt-32 md:mt-137 lg:mt-[-240px]">
-          <motion.img
-            src={sidearrow}
-            className="mix-blend-color-dodge h-6 w-6 sm:h-8 sm:w-8 md:h-30 md:w-30 lg:h-50 lg:w-53"
-            initial={{ rotate: 90, x: 200, opacity: 0 }}
-            animate={{ rotate: 290, x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-          />
-        </div>
-        <div className="absolute right-4 sm:right-8 md:right-[-390px] lg:ml-[-120px] mt-20 sm:mt-32 md:mt-137 lg:mt-[-280px]">
-          <motion.img
-            src={bluringimg}
-            className="mix-blend-color-dodge w-6 h-6 sm:w-8 sm:h-8 md:w-29 md:h-29 lg:w-38 lg:h-38"
-            initial={{ y: -200, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          />
-        </div>
-
-        <div className="absolute right-4 sm:right-8 md:right-[-390px] lg:ml-[-200px] mt-20 sm:mt-32 md:mt-137 lg:mt-[-190px]">
-          <motion.img
-            src={Rocket}
-            className="h-8 w-8 sm:h-12 sm:w-12 md:h-46 md:w-46 lg:h-61 lg:w-61"
-            initial={{ x: -300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-          />
-        </div>
-      </motion.div>
       <div className="relative flex items-center justify-center">
         <div className="w-[90%] sm:w-[60%] mt-10">
           <h2 className="text-lg sm:text-xl md:text-2xl font-bold my-4 sm:my-6 md:my-8 leading-tight">

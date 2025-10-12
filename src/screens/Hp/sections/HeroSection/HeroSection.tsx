@@ -12,36 +12,37 @@ import { motion } from "framer-motion";
 import BlackButton from "../../../../components/BlackButton/BlackButton";
 import { TextAnimate } from "../../../../components/ui/text-animate";
 import { IMAGES } from "../../../../assets";
+import ArrowMove from "./ArrowMove"
 export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
       id={id}
-      className="overflow-hidden h-[53rem]  md:h-[43rem] w-full relative flex justify-center px-34 bg-cover bg-center rounded-b-4xl "
+      className="overflow-hidden h-[53rem]  md:h-[43rem] w-full relative flex justify-center  bg-cover bg-center rounded-b-4xl "
       style={{ backgroundImage: `url(${bg})` }}
       initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
       animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
-      transition={{ duration: 1.5, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="flex flex-col md:flex-row items-center top-30  md:top-0   relative gap-25 z-10 text-center md:text-left">
+      <div className="flex flex-col md:flex-row items-center top-30  md:top-0   relative gap-28 z-10 text-center md:text-left">
         <div className="flex flex-col  text-white gap-7 md:gap-10">
           <div className="flex flex-col gap-2 md:gap-3 text-4xl sm:text-3xl md:text-6xl">
-            <h1 className="text-[34px] opacity-95">
+            <h1 className="md:text-[57px]  opacity-95">
               <TextAnimate
                 animation="blurInUp"
                 by="character"
                 once
-                delay={1.8}
+                delay={1}
                 duration={1}
               >
                 Get quick, no-fuss loans
               </TextAnimate>
             </h1>
-            <h1 className=" font-bold text-[2.5rem]">
+            <h1 className=" font-bold  md:text-[4rem]">
               <TextAnimate
                 animation="blurInUp"
                 by="character"
                 once
-                delay={1.8}
+                delay={1}
                 duration={1}
               >
                 for your business
@@ -51,12 +52,12 @@ export const HeroSection = ({ id }: { id: string }) => {
           <motion.p
             initial={{ opacity: 0, y: 100 }} // start below + invisible
             whileInView={{ opacity: 1, y: 0 }} // move up into place
-            transition={{ duration: 1, delay: 1.8 }} // staggered animation
+            transition={{ duration: 1, delay: 1 }} // staggered animation
             viewport={{ once: true }} // animate only once
             className="text-lg max-w-lg"
           >
-            <div className="w-[99%] flex justify-center items-center ">
-              <p className=" text-[15px] opacity-70 ">
+            <div className=" md:w-[99%] flex items-center px-3 ">
+              <p className=" text-[15px] opacity-90 ">
                 No delays. No hidden terms. Just fast and flexible finance when
                 you need it the most.
               </p>
@@ -66,34 +67,64 @@ export const HeroSection = ({ id }: { id: string }) => {
           <motion.div
             initial={{ opacity: 0, y: 100 }} // start below + invisible
             whileInView={{ opacity: 1, y: 0 }} // move up into place
-            transition={{ duration: 1, delay: 1.8 }} // staggered animation
+            transition={{ duration: 1, delay: 1}} // staggered animation
             viewport={{ once: true }} // animate only once
           >
-            <BlackButton text="Let's Start" className="w-[206px] ml-0" />
+            <BlackButton text="Let's Start" className=" w-45 py-5 md:py-4 md:w-40 ml-0" />
           </motion.div>
         </div>
 
-        <div className="relative w-[360px] h-[400px] top-[-80px] md:top-[0]  flex items-center justify-center">
-          <img
-            className=" z-10 mr-8 md:mr-26 w-[260px]  h-[300px] sm:w-[300px] sm:h-[300px]  md:w-[329px] md:h-[363px]   "
-            src={IMAGES.HeroFounder}
-            alt=""
-          />
-        </div>
+       
+  <motion.div
+  initial={{ y: 100, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 1,
+    ease: "easeOut",
+    delay: 1, }}
+   className="relative w-[360px] h-[400px] top-[50px] md:top-[170px] left-[-92px] md:left-[-140px] flex items-center justify-center"
+>
+  <ArrowMove
+    imageUrl={IMAGES.HeroFounder}
+    altText="Arrow Indicator"
+    moveDistance={80}
+    duration="1s"
+    
+      delay="1s"
+      
+    className="  z-400 mr-8 md:mr- w-[280px] h-[400px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[550px] rotate-2"
+  />
+  </motion.div>
+
+
         <motion.div
-          className="absolute top-[-40px] md:ml-15 rounded-b-full w-200 md:w-370 pr-34 py-10"
+          className="absolute top-[-10px] md:top-[-40px] ml-5 md:ml-15 rounded-b-full w-220 md:w-370 pr-4 py-10"
           initial={{ y: -200, opacity: 0 }} // starts above screen
           animate={{ y: 0, opacity: 1 }} // slides down to normal position
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1,ease:"easeOut" }}
         >
           <img src={toparrow} alt="" className="" />
         </motion.div>
 
-        <img
-          src={correctarrow}
-          alt="arrow background"
-          className="absolute md:ml-110 mt-58 md:mt-10 w-[490px] h-[400px]  md:w-180 md:h-auto  opacity-100 z-0 scale-125"
-        />
+<motion.div
+  initial={{ y: 100, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{
+    duration: 1,
+    ease: "easeOut",
+    delay: 1, // 👈 Wait 3 seconds before starting the animation
+  }}
+  className="absolute"
+>
+  <ArrowMove
+    imageUrl={correctarrow}
+    altText="Arrow Indicator"
+    moveDistance={80}
+    duration="1s"
+    delay="1s"
+    className="ml-[-250px] md:ml-88 mt-80 md:mt-63 w-[500px] h-[304px] md:w-150 md:h-auto opacity-100 z-0 scale-110 md:scale-125 rotate-1"
+  />
+</motion.div>
+
       </div>
       <div className="absolute right-[160px] md:right-[704px] mt-[730px] md:mt-[455px]">
         <motion.img
@@ -101,7 +132,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="w-43 h-50 md:w-90 md:h-98 rotate-120deg] shrink-0 aspect-[201.17/301.89]"
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1.8 }}
+          transition={{ duration: 1, delay:  1 }}
         />
       </div>
 
@@ -111,16 +142,16 @@ export const HeroSection = ({ id }: { id: string }) => {
           src={down2}
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1.8 }}
+          transition={{ duration: 1, delay:  1 }}
         />
       </div>
-      <div className="  absolute mt-137 mr-[-390px]  md:mt-87 md:mr-[-1370px]">
+      <div className="  absolute mt-137 mr-[-400px]  md:mt-87 md:mr-[-1370px]">
         <motion.img
           src={sidearrow}
-          className="mix-blend-color-dodge h-30 md:h-50 md:w-53"
+          className="mix-blend-color-dodge h-25 md:h-50 md:w-53"
           initial={{ rotate: 90, x: 200, opacity: 0 }}
           animate={{ rotate: 290, x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1.8 }}
+          transition={{ duration: 1, delay: 1 }}
         />
       </div>
       <div className="absolute mt-26 ml-[-330px] md:mt-25 md:ml-[-1180px]">
@@ -129,7 +160,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="mix-blend-color-dodge w-29 md:w-38"
           initial={{ y: -200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
         />
       </div>
       <div className="absolute mt-93 md:mt-111 ml-[-394px] md:ml-[-1300px]">
@@ -138,8 +169,8 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="h-46 md:h-61"
           initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 1.8 }}
-        />
+          transition={{ duration: 1, delay:  1 }}
+        />w
       </div>
     </motion.div>
   );
