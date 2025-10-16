@@ -9,7 +9,7 @@ import down2 from "../../../../assets/images/down2.png";
 import sidearrow from "../../../../assets/images/sidearrow.png";
 import toparrow from "../../../../assets/icons/toparrow.svg";
 import { motion } from "framer-motion";
-import BlackButton from "../../../../components/BlackButton/BlackButton";
+// import BlackButton from "../../../../components/BlackButton/BlackButton";
 import { TextAnimate } from "../../../../components/ui/text-animate";
 import { IMAGES } from "../../../../assets";
 import ArrowMove from "./ArrowMove";
