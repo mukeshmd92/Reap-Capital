@@ -18,8 +18,7 @@ export const AboutUsSection = ({ id }: { id: string }) => {
         </div>
 
         {/* Main Content */}
-  <div className="relative max-w-[34rem] w-full h-160 pt-8 md:pt-5  px-3 sm:px-0 mt-6 md:mt-0">
-
+        <div className="relative max-w-[34rem] w-full h-160 pt-8 md:pt-5  px-3 sm:px-0 mt-6 md:mt-0">
           {/* Heading with Badge */}
           <div className="flex flex-wrap text-center justify-center ">
             <h1 className="text-black text-[1.8rem] md:text-[2.5rem] font-inter font-bold md:font-medium  ">
@@ -33,26 +32,20 @@ export const AboutUsSection = ({ id }: { id: string }) => {
               />
             </div>
             <div className="pt-2">
- <h1 className="text-black text-[1.7rem] md:text-[2.5rem]  font-inter font-bold md:font-medium  ">
-              Quantum Leap.
-            </h1>
+              <h1 className="text-black text-[1.7rem] md:text-[2.5rem]  font-inter font-bold md:font-medium  ">
+                Quantum Leap.
+              </h1>
             </div>
-           
           </div>
-          <div>
-            
+          <div></div>
+
+          <div className="mt-1 md:mt-1  leading-relaxed text-base md:text-lg text-center font-semibold ">
+            <TextReveal className="flex flex-col text-red-700">
+              We help business owners access money quickly. Whether it&apos;s to
+              grow, manage cash flow, or grab new opportunities, we&apos;re here
+              to make funding easy.
+            </TextReveal>
           </div>
-         
-        <div className="mt-1 md:mt-1  leading-relaxed text-base md:text-lg text-center font-semibold ">
-  <TextReveal className="flex flex-col text-red-700">
-    We help business owners access money quickly. Whether it&apos;s to grow,
-    manage cash flow, or grab new opportunities, we&apos;re here to make
-    funding easy.
-  </TextReveal>
- 
-</div>
-
-
 
           {/* overflow borders  */}
           {/* left border  */}

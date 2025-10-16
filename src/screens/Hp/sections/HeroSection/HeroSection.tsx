@@ -12,7 +12,8 @@ import { motion } from "framer-motion";
 import BlackButton from "../../../../components/BlackButton/BlackButton";
 import { TextAnimate } from "../../../../components/ui/text-animate";
 import { IMAGES } from "../../../../assets";
-import ArrowMove from "./ArrowMove"
+import ArrowMove from "./ArrowMove";
+import { Button } from "../../../../components/ui/button";
 export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
@@ -67,64 +68,63 @@ export const HeroSection = ({ id }: { id: string }) => {
           <motion.div
             initial={{ opacity: 0, y: 100 }} // start below + invisible
             whileInView={{ opacity: 1, y: 0 }} // move up into place
-            transition={{ duration: 1, delay: 1}} // staggered animation
+            transition={{ duration: 1, delay: 1 }} // staggered animation
             viewport={{ once: true }} // animate only once
           >
-            <BlackButton text="Let's Start" className=" w-45 py-5 md:py-4 md:w-40 ml-0" />
+            {/* <BlackButton
+              text="Let's Start"
+              className=" w-45 py-5 md:py-4 md:w-40 ml-0"
+            /> */}
+            <Button className="mt-6 sm:mt-8 lg:mt-10 w-[180px] sm:w-[190px] lg:w-[206px] h-[55px] sm:h-[54px] lg:h-[58px] bg-black rounded-[18px] sm:rounded-[18px] lg:rounded-[20px] border-[0.5px] border-solid  border-[#ffffff] shadow-[0px_1px_3px_#0000001a,0px_5px_5px_#00000017,0px_11px_7px_#0000000d,0px_20px_8px_#00000003,0px_31px_9px_transparent,inset_0px_0px_3px_5px_#71ffcd66] font-medium text-white text-md sm:text-base lg:text-lg text-center tracking-[-0.3px] sm:tracking-[-0.4px] lg:tracking-[-0.54px] leading-[normal] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms] hover:bg-gray-900 transition-colors cursor-pointer">
+              Let's Start
+            </Button>
           </motion.div>
         </div>
 
-       
-  <motion.div
-  initial={{ y: 100, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  transition={{ duration: 1,
-    ease: "easeOut",
-    delay: 1, }}
-   className="relative w-[360px] h-[400px] top-[50px] md:top-[170px] left-[-92px] md:left-[-140px] flex items-center justify-center"
->
-  <ArrowMove
-    imageUrl={IMAGES.HeroFounder}
-    altText="Arrow Indicator"
-    moveDistance={80}
-    duration="1s"
-    
-      delay="1s"
-      
-    className="  z-400 mr-8 md:mr- w-[280px] h-[400px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[550px] rotate-2"
-  />
-  </motion.div>
-
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 1 }}
+          className="relative w-[360px] h-[400px] top-[50px] md:top-[170px] left-[-92px] md:left-[-140px] flex items-center justify-center"
+        >
+          <ArrowMove
+            imageUrl={IMAGES.HeroFounder}
+            altText="Arrow Indicator"
+            moveDistance={80}
+            duration="1s"
+            delay="1s"
+            className="  z-400 mr-8 md:mr- w-[280px] h-[400px] sm:w-[450px] sm:h-[450px] md:w-[500px] md:h-[550px] rotate-2"
+          />
+        </motion.div>
 
         <motion.div
           className="absolute top-[-10px] md:top-[-40px] ml-5 md:ml-15 rounded-b-full w-220 md:w-370 pr-4 py-10"
           initial={{ y: -200, opacity: 0 }} // starts above screen
           animate={{ y: 0, opacity: 1 }} // slides down to normal position
-          transition={{ duration: 1,ease:"easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <img src={toparrow} alt="" className="" />
         </motion.div>
 
-<motion.div
-  initial={{ y: 100, opacity: 0 }}
-  animate={{ y: 0, opacity: 1 }}
-  transition={{
-    duration: 1,
-    ease: "easeOut",
-    delay: 1, // 👈 Wait 3 seconds before starting the animation
-  }}
-  className="absolute"
->
-  <ArrowMove
-    imageUrl={correctarrow}
-    altText="Arrow Indicator"
-    moveDistance={80}
-    duration="1s"
-    delay="1s"
-    className="ml-[-250px] md:ml-88 mt-80 md:mt-63 w-[500px] h-[304px] md:w-150 md:h-auto opacity-100 z-0 scale-110 md:scale-125 rotate-1"
-  />
-</motion.div>
-
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 1, // 👈 Wait 3 seconds before starting the animation
+          }}
+          className="absolute"
+        >
+          <ArrowMove
+            imageUrl={correctarrow}
+            altText="Arrow Indicator"
+            moveDistance={80}
+            duration="1s"
+            delay="1s"
+            className="ml-[-250px] md:ml-88 mt-80 md:mt-63 w-[500px] h-[304px] md:w-150 md:h-auto opacity-100 z-0 scale-110 md:scale-125 rotate-1"
+          />
+        </motion.div>
       </div>
       <div className="absolute right-[160px] md:right-[704px] mt-[730px] md:mt-[455px]">
         <motion.img
@@ -132,7 +132,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="w-43 h-50 md:w-90 md:h-98 rotate-120deg] shrink-0 aspect-[201.17/301.89]"
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay:  1 }}
+          transition={{ duration: 1, delay: 1 }}
         />
       </div>
 
@@ -142,7 +142,7 @@ export const HeroSection = ({ id }: { id: string }) => {
           src={down2}
           initial={{ y: 200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay:  1 }}
+          transition={{ duration: 1, delay: 1 }}
         />
       </div>
       <div className="  absolute mt-137 mr-[-400px]  md:mt-87 md:mr-[-1370px]">
@@ -169,8 +169,9 @@ export const HeroSection = ({ id }: { id: string }) => {
           className="h-46 md:h-61"
           initial={{ x: -300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay:  1 }}
-        />w
+          transition={{ duration: 1, delay: 1 }}
+        />
+        w
       </div>
     </motion.div>
   );
