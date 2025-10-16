@@ -1,22 +1,21 @@
 import { Button } from "../ui/button";
 
 const BlackButton = ({
-  text,
-  className,
+  text,
+  className,
 }: {
-  text: string;
-  className?: string;
+  text: string;
+  className?: string;
 }) => {
-  return (
-    <Button
-      className={`mx-4 bg-black cursor-pointer hover:border-green-500 hover:text-green-500  rounded-[20px] border  border-solid border-[#ffffff80]  hover:  shadow-[0px_3px_3px_#0000001a,0px_5px_5px_#00000017,0px_11px_7px_#0000000d,0px_20px_8px_#00000003,0px_31px_9px_transparent,inset_0px_0px_3px_5px_#71ffcd66] h-auto px-10 py-4 transition-all duration-300 ease-in-out ${className}`}
-    >
-      <span className="[font-family:'Inter_Variable-Medium',Helvetica] font-medium text-white hover:text-green-500 transition-all duration-300 ease-in-out text-lg text-center tracking-[-0.54px] leading-[normal]">
-        {text}
-      </span>
-    </Button>
- );
+  return (
+    <Button
+      className={`relative mx-4 bg-black text-white cursor-pointer hover:border-green-600 hover:text-green-500 rounded-[20px] border-4 border-solid border-[#1cf17c85] h-auto px-10 py-4 transition-all duration-300 ease-in-out group ${className}`}
+    >
+      <span className="relative z-10 font-medium transition-all duration-300 ease-in-out text-lg text-center tracking-[-0.54px] leading-[normal]">
+        {text}
+      </span>
+    </Button>
+  );
 };
 
 export default BlackButton;
- 

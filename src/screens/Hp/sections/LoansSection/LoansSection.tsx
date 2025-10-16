@@ -73,7 +73,7 @@ const LoansSection = () => {
                   {/* Icon Section */}
                   <div className="relative   w-[200px] h-auto md:h-[130px] mt-[22px] flex-shrink-0">
                     <img
-                      className="w-full h-full"
+                      className="w-full h-full object-contain"
                       alt="Feature icon"
                       src={feature.iconSrc}
                     />
