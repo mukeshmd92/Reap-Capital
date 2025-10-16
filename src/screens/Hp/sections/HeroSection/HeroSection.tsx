@@ -17,7 +17,7 @@ export const HeroSection = ({ id }: { id: string }) => {
   return (
     <motion.div
       id={id}
-      className="overflow-hidden h-[53rem]  md:h-[43rem] w-full relative flex justify-center  bg-cover bg-center rounded-b-4xl "
+      className="  overflow-hidden h-[53rem]  md:h-[43rem] w-full relative flex justify-center  bg-cover bg-center rounded-b-4xl "
       style={{ backgroundImage: `url(${bg})` }}
       initial={{ y: -200, opacity: 0 }} // start zoomed in, invisible
       animate={{ y: 0, opacity: 1 }} // zoom out to normal + fade in
@@ -154,24 +154,26 @@ export const HeroSection = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 1 }}
         />
       </div>
-      <div className="absolute mt-26 ml-[-330px] md:mt-25 md:ml-[-1180px]">
+      <div className="absolute bottom-[67vh]  md:bottom-[55vh] left-[-2vw] md:left-[1vw] ">
         <motion.img
           src={bluringimg}
-          className="mix-blend-color-dodge w-29 md:w-38"
+          className="mix-blend-color-dodge w-[30vw] md:w-[12vw]"
           initial={{ y: -200, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         />
       </div>
-      <div className="absolute mt-93 md:mt-111 ml-[-394px] md:ml-[-1300px]">
-        <motion.img
-          src={Rocket}
-          className="h-46 md:h-61"
-          initial={{ x: -300, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1, delay:  1 }}
-        />w
-      </div>
+     <div className="absolute left-[-8vw] bottom-[38vh] md:left-[-3vw] md:bottom-[3vh]">
+  <motion.img
+    src={Rocket}
+    alt="Rocket"
+    className="w-[33vw] max-w-[120] md:max-w-[180px] h-auto"
+    initial={{ x: -300, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 1, delay: 1 }}
+  />
+</div>
+
     </motion.div>
   );
 };
