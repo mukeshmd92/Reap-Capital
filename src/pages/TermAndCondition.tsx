@@ -51,7 +51,7 @@ const TermAndCondition = () => {
     </div>
 
     <motion.div
-      className="absolute top-[-60px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-25 rounded-b-full w-82 sm:w-40 md:w-200 lg:w-340 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10 z-20"
+      className="absolute top-[-60px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-25 rounded-b-full w-82 sm:w-40 md:w-300 lg:w-340 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10 z-20"
       initial={{ y: -200, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -59,10 +59,10 @@ const TermAndCondition = () => {
       <img src={toparrow} alt="" className="w-full h-auto" />
     </motion.div>
 
-   <div className="absolute right-[160px] md:right-[704px] mt-[-13px] md:mt-[-205px]">
+   <div className="absolute right-[47vw] md:right-[47vw] bottom-[-37vw] md:bottom-[-14vw]">
        <motion.img
        src={Downmoney}
-       className="w-39 h-30 md:w-90 md:h-98 rotate-120deg] shrink-0 aspect-[201.17/301.89]"
+       className="w-[35vw] md:w-[20vw] rotate-120deg] shrink-0 aspect-[201.17/301.89]"
        initial={{ y: 200, opacity: 0 }}
        animate={{ y: 0, opacity: 1 }}
        transition={{ duration: 1, delay: 1.1 }}
@@ -70,9 +70,9 @@ const TermAndCondition = () => {
      
      </div>
       
-               <div className='absolute ml-75 mt-[-30px] md:ml-182 md:mt-[-170px] '>
+               <div className='absolute right-[2vw] md:right-[7vw] bottom-[-37vw] md:bottom-[-14vw] '>
              <motion.img
-             className=" w-30 h-40 md:w-80 md:h-78 rotate-[20.deg] shrink-0 aspect-[201.17/301.89]"
+             className="w-[35vw] md:w-[20vw]  rotate-[20.deg] shrink-0 aspect-[201.17/301.89]"
        src={down2}
        initial={{ y: 200, opacity: 0 }}
        animate={{ y: 0, opacity: 1 }}
@@ -87,29 +87,29 @@ const TermAndCondition = () => {
           <img src={toparrow} alt="" className="" />
         </motion.div>
              </div>  
-             <div className='  absolute mt-[-80px] ml-[300px] md:mr-[-390px]   md:mt-[-240px] md:ml-[1140px]'>
+             <div className=' absolute   md:bottom-[2vw] bottom-[-6vw]  right-[-12vw]  md:right-[-16vw] '>
               <motion.img
        src={sidearrow}
-       className="mix-blend-color-dodge h-20 md:h-50 md:w-53 ml-[50px] md:ml-[-20px] "
+       className="mix-blend-color-dodge w-[20vw] md:w-[13vw]"
        initial={{ rotate: 90, x: 200, opacity: 0 }}
        animate={{ rotate: 290, x: 0, opacity: 1 }}
        transition={{ duration: 1, delay: 1 }}
      />
       </div>
-      <div  className=' absolute mt-[-200px] mr-[-390px]   md:mt-[-280px] md:ml-[-120px]'>
+      <div  className=' absolute md:bottom-[9vw] bottom-[9vw]  left-[-11vw]  md:left-[-10vw]'>
  <motion.img
         src={bluringimg}
-        className="mix-blend-color-dodge w-29 md:w-38"
+        className="mix-blend-color-dodge w-[30vw] md:w-[13vw]"
         initial={{ y: -200, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.5, ease: "easeOut"}}
       />
       </div>
      
-      <div className=' absolute mt-[-57px]  ml-[-50px]  md:mt-[-190px] md:ml-[-200px]'>
+      <div className=' absolute  md:bottom-[-2vw] bottom-[-13vw]  left-[-11vw]  md:left-[-14vw] '>
                  <motion.img
         src={Rocket}
-        className="h-36 md:h-61"
+        className="w-[20vw] md:w-[13vw]"
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1  }}
