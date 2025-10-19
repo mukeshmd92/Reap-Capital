@@ -4,9 +4,9 @@ import { Button } from "../../../../components/ui/button";
 const CheckEligibilitySection = () => {
   return (
     <section className="w-full bg-black">
-      <div className="w-full h-[5.5rem] sm:h-[5rem] lg:h-[6rem] bg-white -mt-4 z-10"></div>
+      <div className="w-full h-[7rem] sm:h-[5rem] lg:h-[6rem] bg-white -mt-3 z-10"></div>
       <div
-        className="w-full rounded-[2rem] sm:rounded-[3rem] lg:rounded-[4rem] overflow-hidden relative flex items-center justify-center -mt-[2rem] sm:-mt-[3rem] lg:-mt-[4rem] py-16  sm:py-2"
+        className="w-full rounded-[4rem] sm:rounded-[3rem] lg:rounded-[4rem] overflow-hidden relative flex items-center justify-center mt-[-4rem] sm:-mt-[3rem] lg:-mt-[4rem] py-16  sm:py-2"
         style={{
           background: "radial-gradient(circle at center 1%, #149D64, #0B6452)",
         }}

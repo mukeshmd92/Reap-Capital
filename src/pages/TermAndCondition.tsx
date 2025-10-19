@@ -34,10 +34,10 @@ const TermAndCondition = () => {
   />
 
   {/* Foreground wrapper (content + all absolute images) */}
-  <div className="relative   z-10">
-    <div className="py-8 sm:py-16 md:py-24 lg:py-35    self-center ">
-      <p className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold  text-white mt-4 sm:mt-8 md:mt-13">
+  <div className="relative   z-10   flex items-center justify-center" >
+    <div className="py-8 sm:py-16 md:py-24 lg:py-35 text-center  w-full max-w-[55%] sm:max-w-[75%]  md:text-start">
         
+      <p className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold whitespace-nowrap text-white mt-4 sm:mt-8 md:mt-13">
         <TextAnimate
                         animation="blurInUp"
                         by="character"
@@ -51,7 +51,7 @@ const TermAndCondition = () => {
     </div>
 
     <motion.div
-      className="absolute top-[-60px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-25 rounded-b-full w-82 sm:w-40 md:w-300 lg:w-340 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10 z-20"
+      className="absolute top-[-60px] sm:top-[-30px] md:top-[-40px] left-4 sm:left-8 md:ml-25 rounded-b-full w-82 sm:w-40 md:w-300 lg:w-440 pr-4 sm:pr-8 md:pr-34 py-4 sm:py-6 md:py-10 z-20"
       initial={{ y: -200, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -109,7 +109,7 @@ const TermAndCondition = () => {
       <div className=' absolute  md:bottom-[-2vw] bottom-[-13vw]  left-[-11vw]  md:left-[-14vw] '>
                  <motion.img
         src={Rocket}
-        className="w-[20vw] md:w-[13vw]"
+        className="w-[30vw] md:w-[13vw]"
         initial={{ x: -300, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 1  }}

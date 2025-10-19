@@ -101,7 +101,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full bg-transparent z-50">
-      <div className="max-w-[87rem] mx-auto flex flex-row justify-between items-center py-6 md:py-6 lg:py-5 lg:4 lg:px-24 md:px-20 px-5 backdrop-blur-xs sm:backdrop-blur-none">
+      <div className={`max-w-[87rem] mx-auto flex flex-row justify-between items-center py-6 md:py-6 lg:py-5 lg:4 lg:px-24 md:px-20 px-5  ${isHeroVisible? "backdrop-blur-none" :"backdrop-blur-xs sm:backdrop-blur-none"}`}>
         <div>
           <Link to="/">
             <img
@@ -182,12 +182,12 @@ const Navbar = () => {
             <span
               className={`w-6 h-0.5 rounded transition-all duration-300 ${
                 isOpen ? "rotate-45 translate-y-1.5" : ""
-              } ${isContactPage || isHeroVisible ? "bg-white" : "bg-black"}`}
+              } ${isContactPage || isHeroVisible  || isTermsPage? "bg-white" : "bg-black"}`}
             ></span>
             <span
               className={`w-6 h-0.5 rounded transition-all mt-1 duration-300 ${
                 isOpen ? "-rotate-45 -translate-y-1.5" : ""
-              } ${isContactPage || isHeroVisible ? "bg-white" : "bg-black"}`}
+              } ${isContactPage || isHeroVisible  || isTermsPage ? "bg-white" : "bg-black"}`}
             ></span>
           </button>
         </div>
